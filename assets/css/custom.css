@@ -1,7 +1,7 @@
 /* COLOUR REFERENCES */
 
 body {
-    margin-top:50px;
+
     font-family: 'Dosis', Helvetica, sans-serif;
     font-size:16px;
     background: url(../img/tile.jpg) top left repeat;
@@ -33,9 +33,9 @@ h4 {
 /* HERO */
 
 #hero {
-    background: url(../img/hero-bg.jpg) center center repeat fixed;
-    background: cover;
-    min-height: 500px;
+    background: url(../img/large-hero.jpg) 50% 50% repeat;
+    background-size: cover;
+    min-height: 1000px;
     padding: 40px 0;
     color: white;
     -webkit-font-smoothing:antialiased;
@@ -49,7 +49,9 @@ h4 {
 img {
     max-width: 100%;
 }
-
+#navbar {
+  opacity: 0;
+}
 /* LAYOUT */
 
 section {

@@ -25,7 +25,8 @@ $(function() {
     });
 });
 
-$(document).ready(function(){
+
+
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -48,4 +49,15 @@ $(document).ready(function(){
       });
     } // End if
   });
+
+//make navbar visible past a certain scroll point
+
+var navBar = $('#navbar');
+var myDistance = scrollY + 950;
+
+$(window).on('scroll', function() {
+    var st = $(this).scrollTop();
+    navBar.css({
+        'opacity' : 0 + st/1050
+    });
 });
