@@ -149,12 +149,17 @@ footer li.signup-link a:hover {
 }
 
 /* --BLOG -- */
+#blogsection {
+  padding-bottom: 0px;
+}
+
 #primary {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.post {
+.post,
+.widget {
   position: relative;
   border: solid 1px #ddd;
   background: white;
@@ -196,6 +201,34 @@ footer li.signup-link a:hover {
   padding: 0;
 }
 
+.widget {
+  padding:20px;
+}
+
+.widget {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #ddd;
+
+}
+
+.widget ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.widget ul li {
+  margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+ position: relative;
+ left:1px;
+}
+
+/* Comments */
+
 .post-comments-badge {
   height:70px;
   width:70px;
@@ -232,4 +265,13 @@ footer li.signup-link a:hover {
 
 #bottom-logo {
     font-size:2em;
+}
+
+.footer-text {
+  margin-top:3px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size:1.35em;
+}
+.footer-text a {
+    padding-right: 10px;
 }
