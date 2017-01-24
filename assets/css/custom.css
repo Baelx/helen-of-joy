@@ -1,9 +1,17 @@
+/* FONT */
+
+@font-face {
+    font-family:"Moon Flower Bold";
+    src: url("../fonts/moon-flower-bold.ttf") /* TTF file for CSS3 browsers */
+}
+
+
 /* COLOUR REFERENCES */
 
 body {
 
-    font-family: 'Dosis', Helvetica, sans-serif;
-    font-size:16px;
+    font-family: 'Moon Flower Bold', Helvetica, sans-serif;
+    font-size:20px;
     background: url(../img/tile.jpg) top left repeat;
 }
 
@@ -28,6 +36,7 @@ h4 {
 }
 #logo {
     top:-5px;
+    position:relative;
 }
 
 /* HERO */
@@ -59,6 +68,10 @@ section {
 }
 .section-header {
     text-align:center;
+}
+.section-header h2{
+  font-family: "Moon Flower Bold";
+  font-size: 50px;
 }
 
 .feature-image {
@@ -125,6 +138,14 @@ section {
     padding:200px 0;
 }
 
+#upcoming-shows {
+  padding-bottom: 0px;
+}
+
+#blogsection {
+  padding-top: 0px;
+}
+
 footer {
     background: #3e4249;
     color:white;
@@ -149,12 +170,13 @@ footer li.signup-link a:hover {
 }
 
 /* --BLOG -- */
+
 #blogsection {
   padding-bottom: 0px;
 }
 
 #primary {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -274,4 +296,73 @@ footer li.signup-link a:hover {
 }
 .footer-text a {
     padding-right: 10px;
+}
+
+/* FORMS */
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px 12px;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width : 991px) {
+	#instructor .container {
+		background: rgba(255,255,255,0.8);
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.logo {
+		width: 50%;
+	}
+
+	#optin p {
+		margin: 0 0 10px;
+	}
+
+	#featurette iframe {
+		height: 240px;
+	}
+
+	.resource {
+		width: 48%;
+		margin-right: 2%;
+	}
+}
+
+@media screen and (max-width : 568px) {
+	#instructor .num {
+		height: 100px;
+		width: 100px;
+		font-size: 22px;
+	}
+
+	#instructor .num span {
+		font-size: 16px;
+	}
+
+	.resource {
+		width: 100%;
+		margin-right: 0;
+	}
 }
