@@ -1,26 +1,26 @@
 $(function() {
-    
+
     //Cache window object
     var $window = $(window);
-    
+
     //Parallax background effect
     $('section[data-type="background"]').each(function() {
-        
+
         var $bgobj = $(this); // assigning the object
-        
+
         $(window).scroll(function() {
-            
+
             // scroll background at var speed
             // the yPos is a negative value b/c it's scrolling up
-            
+
             var yPos = ($window.scrollTop() / $bgobj.data('speed'));
-            
+
             // Put together final background position
             var coords = '50%' + yPos + 'px';
-            
+
             // Move background
             $bgobj.css({ backgroundPosition: coords});
-            
+
         }); //end window scroll
     });
 });
@@ -43,7 +43,7 @@ $(function() {
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
@@ -52,12 +52,10 @@ $(function() {
 
 //make navbar visible past a certain scroll point
 
-var navBar = $('#navbar');
-var myDistance = scrollY + 950;
-
-$(window).on('scroll', function() {
-    var st = $(this).scrollTop();
-    navBar.css({
-        'opacity' : 0 + st/1050
-    });
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 900) {
+        $( "#navbar" ).fadeIn('slow');
+    } else {
+        $( "#navbar" ).fadeOut('slow' );
+    }
 });
