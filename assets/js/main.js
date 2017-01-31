@@ -59,3 +59,5 @@ $(window).scroll(function() {
         $( "#navbar" ).fadeOut('slow' );
     }
 });
+
+//resize hero min-height proportional to width

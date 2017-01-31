@@ -41,12 +41,15 @@ h4 {
 
 /* HERO */
 
+
 #hero {
-    background: url(../img/large-hero2.png) 50% 50% repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 1000px;
+  background: url('../img/helenofjoymobile3.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  min-height: 800px;
 }
+
 
 #hero .hero-text {
     margin-top:30px;
@@ -344,6 +347,14 @@ textarea {
 		margin-right: 2%;
 	}
 }
+
+/*Responsive Image queries */
+@media screen and (max-width: 1068px) {
+  #hero {
+    min-height: 750px;
+  }
+}
+
 
 @media screen and (max-width : 568px) {
 	#instructor .num {
