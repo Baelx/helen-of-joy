@@ -47,7 +47,7 @@ h4 {
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
-  min-height: 800px;
+  min-height:1000px;
 }
 
 
@@ -61,6 +61,7 @@ img {
 #navbar {
   display:none;
 }
+
 /* LAYOUT */
 
 section {
@@ -97,6 +98,7 @@ section {
 
 #bio-section p {
     text-align: center;
+    font-size: 1.5em;
 }
 
 #post-hero-bar {
@@ -119,9 +121,21 @@ section {
     text-align: center;
     color: white;
 }
+#featurette a {
+  text-decoration: none;
+  color: white;
+}
+#featurette a:hover {
+  text-decoration: none;
+  color: #111;
+}
 #upcoming-shows {
     text-align: center;
 }
+#upcoming-shows h1 {
+  margin-bottom: 80px;
+}
+
 .show {
     margin-bottom: 60px;
 }
@@ -249,6 +263,11 @@ footer li.signup-link a:hover {
  left:1px;
 }
 
+iframe {
+  border-radius: 10px;
+}
+
+
 /* Comments */
 
 .post-comments-badge {
@@ -349,12 +368,6 @@ textarea {
 }
 
 /*Responsive Image queries */
-@media screen and (max-width: 1068px) {
-  #hero {
-    min-height: 750px;
-  }
-}
-
 
 @media screen and (max-width : 568px) {
 	#instructor .num {
