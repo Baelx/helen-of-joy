@@ -156,10 +156,6 @@ section {
   padding-bottom: 0px;
 }
 
-#blogsection {
-  padding-top: 0px;
-}
-
 footer {
     background: #3e4249;
     color:white;
@@ -187,7 +183,9 @@ footer li.signup-link a:hover {
 
 #blogsection {
   padding-bottom: 0px;
+  padding-top: 0px;
 }
+
 
 #primary {
   padding-top: 80px;
@@ -206,7 +204,8 @@ footer li.signup-link a:hover {
 }
 
 .post header,
-.post .post-excerpt {
+.post .post-excerpt 
+.post .post-body{
   padding: 20px;
 }
 
