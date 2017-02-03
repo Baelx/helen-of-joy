@@ -52,7 +52,7 @@
                                 <li><a href="contact.html">Audio</a></li>
                                 <li><a href="contact.html">Video</a></li>
                                 <li><a href="contact.html">Upcoming Shows</a></li>
-                                <li><a href="contact.html"> Contact</a></li>
+                                <li><a href="#contact" data-toggle="modal" data-target="#contact"> Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,12 +91,12 @@
               </article>
 
               </div>
-              
-
-            
 
 
-  
+
+
+
+
       		    <!-- SIDEBAR
       			================================================== -->
       		    <aside class="col-sm-4">
@@ -149,45 +149,41 @@
       	    </div><!-- primary -->
           </div><!-- container -->
 
-      	<!-- SIGN UP SECTION
-      	================================================== -->
-      	<section id="signup" data-type="background" data-speed="5">
-      		<div class="container">
-      			<div class="row">
-      				<div class="col-sm-6 col-sm-offset-3">
-      					<h2>Are you ready to take your coding skills to the <strong>next level</strong>?</h2>
-      					<p><a href="" class="btn btn-lg btn-block btn-success">Yes, sign me up!</a></p>
-      				</div><!-- end col -->
-      			</div><!-- row -->
-      		</div><!-- container -->
-      	</section><!-- signup -->
-
-
-
-
-                <!--FOOTER-->
-        <footer>
-            <div class="container">
-                <div class="col-sm-3">
-                    <p id="bottom-logo"><a href="www.google.com">Helen of Joy</a></p>
-                </div>
-                <div class="col-sm-6">
-                    <nav>
-                        <ul class="list-unstyled list-inline">
-                              <li class="active" href="/">Home</li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Audio</a></li>
-                                <li><a href="contact.html">Video</a></li>
-                                <li><a href="contact.html">Upcoming Shows</a></li>
-                                <li><a href="contact.html"> Contact</a></li>
-                        </ul>
-
-                    </nav>
-                </div>
+          <!--MODAL-->
+          <div class="modal fade" id="contact" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form class="form-horizontal" method="post">
+                  <div class="modal-header">
+                    <h4>Contact Us</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="contact-name" class="col-lg-2 control-label">Name:</label>
+                      <div class="col-lg-10">
+                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="contact-email" class="col-lg-2 control-label">Email:</label>
+                      <div class="col-lg-10">
+                        <input type="email" class="form-control" id="contact-name" placeholder="you@example.com">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="contact-msg" class="col-lg-2 control-label">Message:</label>
+                      <div class="col-lg-10">
+                        <textarea name="name" rows="8" cols="80" class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="btn btn-primary" name="button">Send</button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </footer>
-
-        <!--MODAL-->
+          </div>
 
 
         <!-- BOOTSTRAP CORE JS -->

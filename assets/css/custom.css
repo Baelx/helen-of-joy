@@ -1,10 +1,10 @@
+
 /* FONT */
 
 @font-face {
     font-family:"Moon Flower Bold";
     src: url("../fonts/moon-flower-bold.ttf") /* TTF file for CSS3 browsers */
 }
-
 
 /* COLOUR REFERENCES */
 
@@ -204,7 +204,7 @@ footer li.signup-link a:hover {
 }
 
 .post header,
-.post .post-excerpt 
+.post .post-excerpt
 .post .post-body{
   padding: 20px;
 }
@@ -337,6 +337,35 @@ textarea {
 	width: 100%;
 	padding: 6px 12px;
 }
+
+input[type="submit"],
+button[type="submit"] {
+  display: inline-block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  line-height: 1.33;
+  font-size: 18px;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  background-image: none;
+  border: none;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius: 6px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  outline: none;
+  border: none;
+  background: #aaa;
+}
+
 
 /* ==== MEDIA QUERIES ==== */
 
