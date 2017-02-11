@@ -104,12 +104,14 @@ section {
 #post-hero-bar {
     background: #3e4249;
     padding:30px 0;
+      box-shadow:  0px 4px 7px grey;;
 }
 
 #music-player {
     background: #3e4249;
     color: white;
     width:100%;
+    box-shadow:  0px -4px 7px grey, 0px 4px 7px grey ;
 }
 .section-header iframe {
     margin: 0 auto;
@@ -131,6 +133,7 @@ section {
 }
 #upcoming-shows {
     text-align: center;
+    box-shadow:  0px -4px 7px grey;
 }
 #upcoming-shows h1 {
   margin-bottom: 80px;
@@ -143,6 +146,7 @@ section {
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
     border: 50%;
+    box-shadow: 4px 4px 5px black;
 }
 #signup {
     text-align: center;
@@ -161,6 +165,7 @@ footer {
     color:white;
     padding 20px 0 10px;
     font-size: 12px;
+    box-shadow:  0px -4px 7px grey;
 }
 
 footer p {
@@ -273,6 +278,7 @@ footer li.signup-link a:hover {
 
 iframe {
   border-radius: 10px;
+  box-shadow: 4px 4px 5px black;
 }
 
 
