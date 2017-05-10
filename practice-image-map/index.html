@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="cf2" class="shadow">
+    <img class="bottom" style="width:100%;" src="helenofjoycrop.jpg" alt="Helen of Joy"/>
+    <img class="top" style="width:100%;" src="helenofjoycropmap.jpg" alt="Helen of Joy" usemap="#Map"/>
+  </div>
+    <map name="Map" id="Map">
+        <!--Image map buttons from top left to the right and then bottom left to the right-->
+        <div>Hello<area alt="" title="" href="#" shape="poly" coords="837,217,579,213,582,254,836,256" /></div>
+        <area alt="" title="" href="#" shape="poly" coords="1979,238,1668,228,1674,271,1975,274" />
+        <area alt="" title="" href="#" shape="poly" coords="392,941,664,947,664,982,398,978" />
+        <area alt="" title="" href="#" shape="poly" coords="968,849,1258,848,1255,888,970,888" />
+        <area alt="" title="" href="#" shape="poly" coords="1583,974,1883,980,1883,1018,1588,1012" />
+    </map>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="responsive-img-jquery-plugin.js"></script>
+    <script>
+    $(document).ready(function(e) {
+    	$('img[usemap]').rwdImageMaps();
+
+    	$('area').on('click', function() {
+    		alert($(this).attr('alt') + ' clicked');
+    	});
+    });
+    </script>
+  </body>
+</html>
