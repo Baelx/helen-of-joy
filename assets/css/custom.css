@@ -41,15 +41,12 @@ h4 {
 
 /* HERO */
 
-/*
+
 #hero {
-  background: url('../img/helenofjoymobile3.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  min-height:1000px;
+padding:inherit;
+height:1200px;
 }
-*/
+
 
 #hero .hero-text {
     margin-top:30px;
@@ -104,7 +101,7 @@ section {
 #post-hero-bar {
     background: #3e4249;
     padding:30px 0;
-    box-shadow:  0px 4px 7px grey;;
+    box-shadow:  0px 4px 7px grey;
 }
 
 #music-player {
@@ -433,3 +430,5 @@ button[type="submit"]:hover {
 		margin-right: 0;
 	}
 }
+
+

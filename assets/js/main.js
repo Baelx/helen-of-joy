@@ -32,10 +32,3 @@ $(window).scroll(function() {
         $( "#navbar" ).fadeOut('slow' );
     }
 });
-
-//render hero section the same as the window height
-
-$(document).ready(function() {
-  $("#hero").css("min-height", wh);
-  $("#post-hero-bar").css("margin-top", 0);
-});

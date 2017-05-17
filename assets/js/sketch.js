@@ -5,7 +5,8 @@ var cntrimg = -((sh - 400) / 1.55);
 
 function setup() {
   var cnv = createCanvas(sw, sh);
-  img = loadImage("helenofjoytall.jpg");  // Load the image
+  cnv.parent('hero');
+  img = loadImage("/assets/img/helenofjoytall.jpg");  // Load the image
 }
 
 function draw() {
@@ -13,4 +14,4 @@ function draw() {
   image(img, 0, cntrimg, sw, sw * 1.5);
 }
 
-console.log(cntrimg);
+console.log("hello");
