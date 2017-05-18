@@ -45,6 +45,7 @@ h4 {
 #hero {
 padding:inherit;
 height:1200px;
+background-color: white;
 }
 
 
@@ -430,5 +431,3 @@ button[type="submit"]:hover {
 		margin-right: 0;
 	}
 }
-
-
