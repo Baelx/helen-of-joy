@@ -36,11 +36,3 @@ the y values are based on the height of the canvas, but they should match the im
 With your current setup, the x positions of your text are generally consistent across different resolutions, with all text elements drifting slightly to the right when viewed on smaller devices.
 You need to re-think your y positions as these are generally out of whack
 
-I've defined a y coordinate on the canvas, What is that equivalent to on the image itself? How much of the image is being scrolled down to get to that point? From the top of the image, it's 1000 px
-
-Canvas = 170 from top > sh / 170 = 4.7117
-Image = 1000 from top > imgh / 1000 = 2.4623
-
-it's got the initial coordinate, now it just needs to move not at the rate of compression of the canvas but at the rate of compression of the image as the screen smallens
-
-
