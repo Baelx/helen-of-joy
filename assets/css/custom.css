@@ -186,7 +186,49 @@ footer li.signup-link a:hover {
     font-weight:bold;
 }
 
+/* -- AUDIO PAGE -- */
+#audiopage {
+background-image: url('../img/dark-blur.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#audioplayer {
+  position: relative;
+  margin-left:50%;
+  margin-top: 25%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* -- VIDEO PAGE -- */
+
+#videopage {
+background: url('../img/water-blur.jpeg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#videopageplayer {
+  position: absolute;
+  margin-top: 25%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* --BLOG -- */
+
+#blogpage {
+  background: url('../img/red-blur.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 #blogsection {
   padding-bottom: 0px;
