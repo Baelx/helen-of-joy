@@ -17,6 +17,15 @@ var fontDraw = function() {
     return imgh / 25;
   }
 }
+var circleDraw = function() {
+if(sw >=1000){
+return circlew;
+} else if (sw < 1000) {
+  return circlew-7;
+} else if (sw < 800) {
+  return circlew-10;
+  }
+}
 
 function preload() {
   moonflower = loadFont('assets/fonts/moon-flower-bold.ttf');
@@ -33,21 +42,22 @@ function setup() {
 
   circlew = 27;
   // clickable circles over the stars
-  ellipse(sw / 3.5555, 155, circlew); // AUDIO
-  ellipse(sw / 1.38288, 166, circlew); // VIDEO
-  ellipse(sw / 4.73372, 626, circlew); // SHOWS
-  ellipse(sw / 2.24403, 564, circlew); // BLOG
-  ellipse(sw / 1.4349775784753362, 647, circlew); // CONTACT
+  noStroke();
+  ellipse(sw / 3.5555, imgh/2.4981410215926707 + drawheight, circleDraw()); // AUDIO
+  ellipse(sw / 1.38288, imgh/2.4705695099518676 + drawheight, circleDraw()); // VIDEO
+  ellipse(sw / 4.73372, imgh/1.6903885892153363 + drawheight, circleDraw()); // SHOWS
+  ellipse(sw / 2.24403, imgh/1.7655350352677948 + drawheight, circleDraw()); // BLOG
+  ellipse(sw / 1.434977, imgh/1.666365438789363 + drawheight, circleDraw()); // CONTACT
 
   //  text that will fade in
   fill('white');
   textFont(moonflower);
   textSize(fontDraw());
-  text(sections[0], sw / 3.9036, 170, 70, 80);
-  text(sections[1], sw / 1.4234, 180, 70, 80);
-  text(sections[2], sw / 5.5154, 640, 70, 80);
-  text(sections[3], sw / 2.3369, 575, 70, 80);
-  text(sections[4], sw / 1.5035, 660, 70, 80);
+  text(sections[0], sw / 3.9036, imgh/2.460693795890683 + drawheight, 70, 80);
+  text(sections[1], sw / 1.4234, imgh/2.4363465133883424 + drawheight, 70, 80);
+  text(sections[2], sw / 5.5154, imgh/1.6742969260954872 + drawheight, 70, 80);
+  text(sections[3], sw / 2.3369, imgh/1.7517188770051184 + drawheight, 70, 80);
+  text(sections[4], sw / 1.5035, imgh/1.6518331624797433 + drawheight, 70, 80);
 }
 
 function draw() {
@@ -56,13 +66,13 @@ function draw() {
 
 function mouseMoved() {
   // Check if mouse is inside the circles
-  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, 155);
-  incircles[1] = dist(mouseX, mouseY, sw / 1.38288, 166);
-  incircles[2] = dist(mouseX, mouseY, sw / 4.73372, 626);
-  incircles[3] = dist(mouseX, mouseY, sw / 2.24403, 564);
-  incircles[4] = dist(mouseX, mouseY, sw / 1.4349775784753362, 647);
+  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, imgh/2.4981410215926707 + drawheight);
+  incircles[1] = dist(mouseX, mouseY, sw / 1.38288, imgh/2.4705695099518676 + drawheight);
+  incircles[2] = dist(mouseX, mouseY, sw / 4.73372, imgh/1.6903885892153363 + drawheight);
+  incircles[3] = dist(mouseX, mouseY, sw / 2.24403, imgh/1.7655350352677948 + drawheight);
+  incircles[4] = dist(mouseX, mouseY, sw / 1.434977, imgh/1.666365438789363 + drawheight);
 
-  if (incircles[0] < circlew / 2 || incircles[1] < circlew / 2 || incircles[2] < circlew / 2 || incircles[3] < circlew / 2 || incircles[4] < circlew / 2) {
+  if (incircles[0] < circleDraw() / 2 || incircles[1] < circleDraw() / 2 || incircles[2] < circleDraw() / 2 || incircles[3] < circleDraw() / 2 || incircles[4] < circleDraw() / 2) {
     document.body.style.cursor = "pointer";
   } else {
     document.body.style.cursor = "default";
@@ -73,26 +83,26 @@ function mouseMoved() {
 
 function mousePressed() {
   // Check if mouse is inside the circles
-  incircles[0] = dist(mouseX, mouseY, 450, 155);
-  incircles[1] = dist(mouseX, mouseY, 1157, 166);
-  incircles[2] = dist(mouseX, mouseY, 338, 626);
-  incircles[3] = dist(mouseX, mouseY, 713, 564);
-  incircles[4] = dist(mouseX, mouseY, 1115, 647);
+  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, imgh/2.4981410215926707 + drawheight);
+  incircles[1] = dist(mouseX, mouseY, sw / 1.38288, imgh/2.4705695099518676 + drawheight);
+  incircles[2] = dist(mouseX, mouseY, sw / 4.73372, imgh/1.6903885892153363 + drawheight);
+  incircles[3] = dist(mouseX, mouseY, sw / 2.24403, imgh/1.7655350352677948 + drawheight);
+  incircles[4] = dist(mouseX, mouseY, sw / 1.434977, imgh/1.666365438789363 + drawheight);
 
 
-  if (incircles[0] < circlew / 2) {
+  if (incircles[0] < circleDraw() / 2) {
     window.location.href = "audio.html";
   }
-  if (incircles[1] < circlew / 2) {
+  if (incircles[1] < circleDraw() / 2) {
     window.location.href = "video.html";
   }
-  if (incircles[2] < circlew / 2) {
+  if (incircles[2] < circleDraw() / 2) {
     window.location.href = "#shows";
   }
-  if (incircles[3] < circlew / 2) {
+  if (incircles[3] < circleDraw() / 2) {
     window.location.href = "blog.html";
   }
-  if (incircles[4] < circlew / 2) {
+  if (incircles[4] < circleDraw() / 2) {
     window.location.href = "contact.html";
   }
 

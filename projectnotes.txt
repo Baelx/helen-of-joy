@@ -1,4 +1,4 @@
-Links need to be in the same place relative to the image, not the canvas.
+2462.329317269076 y. This is 2.5108780005364775 of the image. How muchLinks need to be in the same place relative to the image, not the canvas.
 Link text and clickable area(triangles), will also need to shrink with proportionally with the image.
 
 
@@ -52,6 +52,13 @@ At any point, the position of your dots must go down - this rate of change will 
 Canvas points are drawn going from 0
 image points will be from top of canvas plus the height of the image
 
-First point is 155 + top of image 
+First point is 155 from the top of the page
+first point is 980 from the top of the image
 
 the first point is drawn at 980.664658634538 y on the image when it's 2462.329317269076 y. This is 2.5108780005364775 of the image. How much is it of the canvas?
+
+Balls need to be drawn at 2.510 of the image height minus the pixel value of the height of the image
+
+imgh/(-drawheight + number) 
+
+imgh/number2 + drawheight
