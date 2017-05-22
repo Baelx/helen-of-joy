@@ -33,11 +33,11 @@ function setup() {
 
   circlew = 27;
   // clickable circles over the stars
-  ellipse(sw/3.55555555555556, 155, circlew); // AUDIO
-  ellipse(sw/1.1063094209161626, 166, circlew); // VIDEO
-  ellipse(sw/3.78698224852071, 626, circlew); // SHOWS
-  ellipse(sw/1.7952314165497896, 564, circlew); // BLOG
-  ellipse(sw/1.147982062780269, 647, circlew); // CONTACT
+  ellipse(sw / 3.5555, 155, circlew); // AUDIO
+  ellipse(sw / 1.38288, 166, circlew); // VIDEO
+  ellipse(sw / 4.73372, 626, circlew); // SHOWS
+  ellipse(sw / 2.24403, 564, circlew); // BLOG
+  ellipse(sw / 1.4349775784753362, 647, circlew); // CONTACT
 
   //  text that will fade in
   fill('white');
@@ -56,13 +56,11 @@ function draw() {
 
 function mouseMoved() {
   // Check if mouse is inside the circles
-  console.log("mouseMoved running");
-  // Check if mouse is inside the circles
   incircles[0] = dist(mouseX, mouseY, sw / 3.5555, 155);
-  incircles[1] = dist(mouseX, mouseY, sw /1.38288, 166);
-  incircles[2] = dist(mouseX, mouseY, sw/4.73372, 626);
-  incircles[3] = dist(mouseX, mouseY, sw/2.24403, 564);
-  incircles[4] = dist(mouseX, mouseY, sw/1.43497, 647);
+  incircles[1] = dist(mouseX, mouseY, sw / 1.38288, 166);
+  incircles[2] = dist(mouseX, mouseY, sw / 4.73372, 626);
+  incircles[3] = dist(mouseX, mouseY, sw / 2.24403, 564);
+  incircles[4] = dist(mouseX, mouseY, sw / 1.4349775784753362, 647);
 
   if (incircles[0] < circlew / 2 || incircles[1] < circlew / 2 || incircles[2] < circlew / 2 || incircles[3] < circlew / 2 || incircles[4] < circlew / 2) {
     document.body.style.cursor = "pointer";
@@ -74,29 +72,28 @@ function mouseMoved() {
 
 
 function mousePressed() {
-  console.log("mousePressed running")
   // Check if mouse is inside the circles
-  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, 155);
-  incircles[1] = dist(mouseX, mouseY, sw /1.38288, 166);
-  incircles[2] = dist(mouseX, mouseY, sw/4.73372, 626);
-  incircles[3] = dist(mouseX, mouseY, sw/2.24403, 564);
-  incircles[4] = dist(mouseX, mouseY, sw/1.43497, 647);
+  incircles[0] = dist(mouseX, mouseY, 450, 155);
+  incircles[1] = dist(mouseX, mouseY, 1157, 166);
+  incircles[2] = dist(mouseX, mouseY, 338, 626);
+  incircles[3] = dist(mouseX, mouseY, 713, 564);
+  incircles[4] = dist(mouseX, mouseY, 1115, 647);
 
 
   if (incircles[0] < circlew / 2) {
-    window.location.href="audio.html";
+    window.location.href = "audio.html";
   }
   if (incircles[1] < circlew / 2) {
-    window.location.href="video.html";
+    window.location.href = "video.html";
   }
   if (incircles[2] < circlew / 2) {
-    window.location.href="#shows";
+    window.location.href = "#shows";
   }
   if (incircles[3] < circlew / 2) {
-    window.location.href="blog.html";
+    window.location.href = "blog.html";
   }
   if (incircles[4] < circlew / 2) {
-    window.location.href="contact.html";
+    window.location.href = "contact.html";
   }
 
 }

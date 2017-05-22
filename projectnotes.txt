@@ -43,4 +43,15 @@ Image = 1000 from top > imgh / 1000 = 2.4623
 
 it's got the initial coordinate, now it just needs to move not at the rate of compression of the canvas but at the rate of compression of the image as the screen smallens
 
+You need to track a single vertical position as your document smallens.This position could be the top left corner of the image. Which is    
 
+0,2462
+
+At any point, the position of your dots must go down - this rate of change will be generally constant. 
+
+Canvas points are drawn going from 0
+image points will be from top of canvas plus the height of the image
+
+First point is 155 + top of image 
+
+the first point is drawn at 980.664658634538 y on the image when it's 2462.329317269076 y. This is 2.5108780005364775 of the image. How much is it of the canvas?
