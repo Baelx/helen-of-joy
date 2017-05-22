@@ -1,20 +1,20 @@
 var img;
-var sections = ["AUDIO","VIDEO","SHOWS","BLOG","CONTACT"];
+var sections = ["AUDIO", "VIDEO", "SHOWS", "BLOG", "CONTACT"];
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var imgh = sw * 1.5389558232931726;
-var drawheight = -(imgh/2 - sh/2);
+var drawheight = -(imgh / 2 - sh / 2);
 var moonflower; //font
 var incircles = [];
 var circlew;
 
 var fontDraw = function() {
-if(sw >= 1200){
-return imgh/49;
-} else if (sw >= 700) {
-return imgh/35;
-} else {
-return imgh/25;
+  if (sw >= 1200) {
+    return imgh / 49;
+  } else if (sw >= 700) {
+    return imgh / 35;
+  } else {
+    return imgh / 25;
   }
 }
 
@@ -26,18 +26,18 @@ function preload() {
 function setup() {
   var cnv = createCanvas(sw, sh);
   cnv.parent('hero');
-
   // Displays the image exactly as wide as the viewport and keeps the aspect ratio of
   // the image(1 over 1.5389558232931726)
-  image(img, 0, drawheight, sw, imgh);
+  image(img, 0, drawheight, sw, sw * 1.5389558232931726);
+
 
   circlew = 27;
   // clickable circles over the stars
-  ellipse(450,155,circlew);  // AUDIO
-  ellipse(1157,166,circlew); // VIDEO
-  ellipse(338,626,circlew);  // SHOWS
-  ellipse(713,564,circlew);  // BLOG
-  ellipse(1115,647,circlew); // CONTACT
+  ellipse(sw/3.55555555555556, 155, circlew); // AUDIO
+  ellipse(sw/1.1063094209161626, 166, circlew); // VIDEO
+  ellipse(sw/3.78698224852071, 626, circlew); // SHOWS
+  ellipse(sw/1.7952314165497896, 564, circlew); // BLOG
+  ellipse(sw/1.147982062780269, 647, circlew); // CONTACT
 
   //  text that will fade in
   fill('white');
@@ -58,28 +58,17 @@ function mouseMoved() {
   // Check if mouse is inside the circles
   console.log("mouseMoved running");
   // Check if mouse is inside the circles
-  incircles[0] = dist(mouseX, mouseY, 450, 155);
-  incircles[1] = dist(mouseX, mouseY, 1157, 166);
-  incircles[2] = dist(mouseX, mouseY, 338, 626);
-  incircles[3] = dist(mouseX, mouseY, 713, 564);
-  incircles[4] = dist(mouseX, mouseY, 1115, 647);
+  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, 155);
+  incircles[1] = dist(mouseX, mouseY, sw /1.38288, 166);
+  incircles[2] = dist(mouseX, mouseY, sw/4.73372, 626);
+  incircles[3] = dist(mouseX, mouseY, sw/2.24403, 564);
+  incircles[4] = dist(mouseX, mouseY, sw/1.43497, 647);
 
-
-
-    if (incircles < circlew/2)
-        {
-      document.body.style.cursor = "pointer";
-      } else {
-      document.body.style.cursor = "default";
-        }
-
-
-
-
-
-
-
-
+  if (incircles[0] < circlew / 2 || incircles[1] < circlew / 2 || incircles[2] < circlew / 2 || incircles[3] < circlew / 2 || incircles[4] < circlew / 2) {
+    document.body.style.cursor = "pointer";
+  } else {
+    document.body.style.cursor = "default";
+  }
 }
 
 
@@ -87,17 +76,29 @@ function mouseMoved() {
 function mousePressed() {
   console.log("mousePressed running")
   // Check if mouse is inside the circles
-  incircles[0] = dist(mouseX, mouseY, 450, 155);
-  incircles[1] = dist(mouseX, mouseY, 1157, 166);
-  incircles[2] = dist(mouseX, mouseY, 338, 626);
-  incircles[3] = dist(mouseX, mouseY, 713, 564);
-  incircles[4] = dist(mouseX, mouseY, 1115, 647);
+  incircles[0] = dist(mouseX, mouseY, sw / 3.5555, 155);
+  incircles[1] = dist(mouseX, mouseY, sw /1.38288, 166);
+  incircles[2] = dist(mouseX, mouseY, sw/4.73372, 626);
+  incircles[3] = dist(mouseX, mouseY, sw/2.24403, 564);
+  incircles[4] = dist(mouseX, mouseY, sw/1.43497, 647);
 
-  incircles.forEach(function(x) {
-  if (x < circlew/2){
-    return incircles[x];
-    }
-  })
+
+  if (incircles[0] < circlew / 2) {
+    window.location.href="audio.html";
+  }
+  if (incircles[1] < circlew / 2) {
+    window.location.href="video.html";
+  }
+  if (incircles[2] < circlew / 2) {
+    window.location.href="#shows";
+  }
+  if (incircles[3] < circlew / 2) {
+    window.location.href="blog.html";
+  }
+  if (incircles[4] < circlew / 2) {
+    window.location.href="contact.html";
+  }
+
 }
 
 //debugging section

@@ -241,6 +241,14 @@ background-size: cover;
   padding-bottom: 40px;
 }
 
+#postpage {
+  background: url('../img/red-blur.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .post,
 .widget {
   position: relative;
