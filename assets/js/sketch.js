@@ -8,6 +8,10 @@ var moonflower; //font
 var incircles = [];
 var circlew = 27;
 var textOpacity = 0;
+var setTime = ((new Date().getTime() / 1000) % 10);
+var d = new Date();
+
+var result = Math.round(setTime * 100) / 100;
 
 var fontDraw = function() {
   if (sw >= 1200) {
@@ -29,7 +33,7 @@ var circleDraw = function() {
 }
 
 function preload() {
-  moonflower = loadFont('assets/fonts/moon-flower-bold.ttf');
+  moonflower = loadFont('assets/fonts/moon-flower.ttf');
   img = loadImage("assets/img/helenofjoytall.jpg");
 }
 
@@ -49,21 +53,28 @@ function setup() {
   ellipse(sw / 2.24403, imgh / 1.7655350352677948 + drawheight, circleDraw()); // BLOG
   ellipse(sw / 1.434977, imgh / 1.666365438789363 + drawheight, circleDraw()); // CONTACT
 
-  //  text that will fade in
 
-  fill(255, 255, 255, textOpacity);
-  textFont(moonflower);
-  tint(255, 126);
-  textSize(fontDraw());
-  text(sections[0], sw / 3.9036, imgh / 2.460693795890683 + drawheight, 70, 80);
-  text(sections[1], sw / 1.4234, imgh / 2.4363465133883424 + drawheight, 70, 80);
-  text(sections[2], sw / 5.5154, imgh / 1.6742969260954872 + drawheight, 70, 80);
-  text(sections[3], sw / 2.3369, imgh / 1.7517188770051184 + drawheight, 70, 80);
-  text(sections[4], sw / 1.5035, imgh / 1.6518331624797433 + drawheight, 70, 80);
+
+
 
 }
 
-function Draw() {
+function draw() {
+  setInterval(function() {
+
+    //  text that will fade in
+
+    textOpacity += 10;
+    fill(255, 255, 255, textOpacity);
+    textFont(moonflower);
+    tint(255, 126);
+    textSize(fontDraw());
+    text(sections[0], sw / 3.9036, imgh / 2.460693795890683 + drawheight, 70, 80);
+    text(sections[1], sw / 1.4234, imgh / 2.4363465133883424 + drawheight, 70, 80);
+    text(sections[2], sw / 5.5154, imgh / 1.6742969260954872 + drawheight, 70, 80);
+    text(sections[3], sw / 2.3369, imgh / 1.7517188770051184 + drawheight, 70, 80);
+    text(sections[4], sw / 1.5035, imgh / 1.6518331624797433 + drawheight, 70, 80);
+  }, 1000);
 
 }
 
@@ -108,8 +119,4 @@ function mousePressed() {
   if (incircles[4] < circleDraw() / 2) {
     window.location.href = "contact.html";
   }
-
 }
-
-//debugging section
-console.log("Making sketch.js changes");

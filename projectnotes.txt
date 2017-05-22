@@ -66,3 +66,9 @@ imgh/number2 + drawheight
 
 
 You'll use settimeout. Within that function, you'll declare a new Date and then watch how many seconds have passed since then.  After 2.55 seconds, you'll stop the function and your text should be completely filled in. The second value (0 to 2.55 seconds) should go into the opacity value for the text, which ranges from 0 (invisible) to 255(completely filled in). 
+
+First, create a function that defines a new date element upon page load
+
+Then, have a timer countdown the seconds with two decimal places. Feed this timer value into the draw function and have that update the opacity dynamically.
+
+
