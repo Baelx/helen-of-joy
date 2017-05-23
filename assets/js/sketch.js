@@ -8,10 +8,6 @@ var moonflower; //font
 var incircles = [];
 var circlew = 27;
 var textOpacity = 0;
-var setTime = ((new Date().getTime() / 1000) % 10);
-var d = new Date();
-
-var result = Math.round(setTime * 100) / 100;
 
 var fontDraw = function() {
   if (sw >= 1200) {
@@ -54,13 +50,7 @@ function setup() {
   ellipse(sw / 1.434977, imgh / 1.666365438789363 + drawheight, circleDraw()); // CONTACT
 
 
-
-
-
-}
-
-function draw() {
-  setInterval(function() {
+  var myTimer = setInterval(function() {
 
     //  text that will fade in
 
@@ -74,7 +64,15 @@ function draw() {
     text(sections[2], sw / 5.5154, imgh / 1.6742969260954872 + drawheight, 70, 80);
     text(sections[3], sw / 2.3369, imgh / 1.7517188770051184 + drawheight, 70, 80);
     text(sections[4], sw / 1.5035, imgh / 1.6518331624797433 + drawheight, 70, 80);
-  }, 1000);
+  }, 105);
+
+  setTimeout(function() {
+    clearInterval(myTimer);
+  }, 5000);
+
+}
+
+function draw() {
 
 }
 
