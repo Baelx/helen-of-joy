@@ -5,9 +5,6 @@
   src: url("../fonts/moon-flower-bold.ttf")/* TTF file for CSS3 browsers */
 }
 
-
-/* COLOUR REFERENCES */
-
 body {
   font-family: 'Moon Flower Bold', Helvetica, sans-serif;
   font-size: 20px;
@@ -18,6 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: bold;
+  color: white;
 }
 
 h1 {
@@ -26,17 +24,6 @@ h1 {
 
 h1, h2 {
   margin: 0 0 40px;
-}
-
-#bio-header {
-color:white;
-}
-
-#music-player-header {
-  display: inline;
-  box-shadow: 6px -6px 6px 5px #000;
-  -moz-box-shadow: 6px 6px 5px #000;
-  -webkit-box-shadow: 6px 6px 5px #000;
 }
 
 h3 {
@@ -50,6 +37,20 @@ h4 {
 #logo {
   top: -5px;
   position: relative;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+.link-to-more {
+  font-size: 30px;
+  color: white;
+}
+
+.link-to-more:hover {
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -140,9 +141,7 @@ section {
 #post-hero-bar {
   background: #3e4249;
   padding: 30px 0;
-  box-shadow: 0px 4px 5px black;
-  -moz-box-shadow: 0px 4px 5px black;
-  -webkit-box-shadow: 0px 4px 5px black;
+  box-shadow: 6px 6px 5px #111;
   z-index: 2;
   position: relative;
 }
@@ -151,11 +150,18 @@ section {
   background: #3e4249;
   color: white;
   width: 100%;
-  box-shadow: 0px 4px 5px black;
-  -moz-box-shadow: 0px 4px 5px black;
-  -webkit-box-shadow: 0px 4px 5px black;
+  -moz-box-shadow: 0 0 5px 5px #111;
+  -webkit-box-shadow: 0 0 5px 5px #111;
+  box-shadow: 0 0 5px 5px #111;
   z-index: 2;
   position: relative;
+}
+
+#music-player-header {
+  display: inline;
+  box-shadow: 6px -6px 6px 5px #000;
+  -moz-box-shadow: 6px 6px 5px #000;
+  -webkit-box-shadow: 6px 6px 5px #000;
 }
 
 .section-header iframe {
@@ -182,14 +188,22 @@ section {
 
 #shows {
   text-align: center;
-  box-shadow: 6px 6px 5px #888888;
+  -moz-box-shadow: 0 0 5px 5px #111;
+  -webkit-box-shadow: 0 0 5px 5px #111;
+  box-shadow: 0 0 5px 5px #111;
   padding-bottom: 0px;
   background-color: #3e4249;
-  color:white;
+  color: white;
+  position: relative;
+  z-index: 2;
 }
 
 #shows h1 {
   margin-bottom: 80px;
+}
+
+.show h3 {
+  font-size: 25px;
 }
 
 .show {
@@ -204,7 +218,11 @@ section {
 }
 
 .show div p {
-  font-size: 20px;
+  font-size: 23px;
+}
+
+.show div a {
+  font-size: 25px;
 }
 
 #signup {
@@ -220,7 +238,9 @@ footer {
   color: white;
   padding 20px 0 10px;
   font-size: 12px;
-  box-shadow: 0px -4px 7px grey;
+  -moz-box-shadow: 0 0 5px 5px #111;
+  -webkit-box-shadow: 0 0 5px 5px #111;
+  box-shadow: 0 0 5px 5px #111;
 }
 
 footer p {
@@ -232,7 +252,8 @@ footer a:link, footer a:visited {
 }
 
 footer a:hover {
-  color: #dd5638;
+  color: black;
+  text-decoration: none;
 }
 
 footer li.signup-link a {
@@ -293,6 +314,11 @@ footer li.signup-link a:hover {
 #blogsection {
   padding-bottom: 0px;
   padding-top: 0px;
+  background: url('../img/light-blur.jpeg') center center repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #primary {
@@ -335,8 +361,20 @@ footer li.signup-link a:hover {
   border-bottom: solid 1px #ddd;
 }
 
+header h3 {
+  font-size: 35px;
+}
+
+header h3 a {
+  text-decoration: none;
+}
+
+header h3 a:hover {
+  text-decoration: none;
+}
+
 .post header h1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .post-image {
