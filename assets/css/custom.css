@@ -9,6 +9,7 @@ body {
   font-family: 'Moon Flower Bold', Helvetica, sans-serif;
   font-size: 20px;
   background: url(../img/tile.jpg) top left repeat;
+  scroll-behaviour: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {

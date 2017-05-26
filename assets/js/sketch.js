@@ -103,16 +103,17 @@ function mousePressed() {
 
 
   if (incircles[0] < circleDraw() / 2) {
-    window.location.href = "audio.html";
+    // window.location.href = "audio.html";
+    document.getElementById('music-player').scrollIntoView();
   }
   if (incircles[1] < circleDraw() / 2) {
-    window.location.href = "video.html";
+    document.getElementById('featurette').scrollIntoView();
   }
   if (incircles[2] < circleDraw() / 2) {
-    window.location.href = "#shows";
+    document.getElementById('shows').scrollIntoView();
   }
   if (incircles[3] < circleDraw() / 2) {
-    window.location.href = "blog.html";
+    document.getElementById('blogsection').scrollIntoView();
   }
   if (incircles[4] < circleDraw() / 2) {
     window.location.href = "contact.html";
