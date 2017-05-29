@@ -120,7 +120,8 @@ section {
 
 #bio-container {
   padding-top: 20px;
-  background-color: #3e4249cc;
+  background-color: #3e4249;
+  opacity: 0.8;
   border: solid 1px #ddd;
   color: black;
   margin-top: 100px;
@@ -324,7 +325,8 @@ height: 555px;
 
 .post, .widget {
   position: relative;
-  background-color: #3e4249cc;
+  background-color: #3e4249;
+  opacity: 0.8;
   border: solid 1px #ddd;
   color: white;
   padding: 20px;
@@ -559,4 +561,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   #audiopageplayer {
   width:275px;
   }
+#videopageplayer {
+  margin-top:50%;
+}
 }
