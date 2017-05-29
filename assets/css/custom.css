@@ -123,7 +123,6 @@ section {
   background-color: #3e4249cc;
   border: solid 1px #ddd;
   color: black;
-  padding: 20px;
   margin-top: 100px;
   margin-bottom: 100px;
   width: 50%;
@@ -265,42 +264,30 @@ footer li.signup-link a:hover {
   font-weight: bold;
 }
 
+/*-- MEDIA PAGES --*/
 
-/* -- AUDIO PAGE -- */
+.media-page {
+padding-top: 75px;
+}
+
+.media-player {
+display: block;
+margin: 0 auto;
+}
+
+#audiopageplayer {
+border: 0;
+width:350px;
+height: 555px;
+}
 
 #audiopage {
-  background-image: url('../img/dark-blur.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('../img/dark-blur.jpg') no-repeat fixed center;
 }
-
-#audioplayer {
-  position: relative;
-  margin-left: 50%;
-  margin-top: 25%;
-  transform: translate(-50%, -50%);
-}
-
-
-/* -- VIDEO PAGE -- */
 
 #videopage {
-  background: url('../img/water-blur.jpeg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('../img/water-blur.jpeg') no-repeat fixed center;
 }
-
-#videopageplayer {
-  position: absolute;
-  margin-top: 25%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 
 /* --BLOG -- */
 
@@ -548,6 +535,9 @@ input[type="submit"]:hover, button[type="submit"]:hover {
     width: 48%;
     margin-right: 2%;
   }
+  #bio-container {
+  width:90%;
+  }
 }
 
 
@@ -565,5 +555,8 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   .resource {
     width: 100%;
     margin-right: 0;
+  }
+  #audiopageplayer {
+  width:275px;
   }
 }
