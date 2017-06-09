@@ -1,71 +1,30 @@
-<!DOCTYPE html>
+<?php
+/*
+  Template Name: Home Page
+*/
 
-<html>
+// CUSTOM FIELDS
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="assets/img/favicon.ico">
+// Bio Section
+$bio_title = get_field('bio_title');
+$bio_content = get_field('bio_content');
+$bio_background_image = get_field('bio_background_image');
 
-  <!--Bootstrap core CSS-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+// Audio Section
+$featured_song_section_title = get_field('featured_song_section_title');
+$bandcamp_html_embed_code = get_field('bandcamp_html_embed_code');
+$link_to_audio_page_text = get_field('link_to_audio_page_text');
 
-  <title>Helen of Joy</title>
+// Video Section
 
-  <!--FontAwesome Icons-->
-  <link href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <!--Main styles sheet-->
-  <link href="assets/css/custom.css" rel="stylesheet">
-
-  <!--p5.js links for image map -->
-  <script src="assets/js/p5.min.js"></script>
-  <script src="assets/js/sketch.js"></script>
-  <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+$featured_video_section_title = get_field('featured_video_section_title');
+$featured_video_background_image = get_field('featured_video_background_image');
+$video_html_embed_code = get_field('video_html_embed_code');
+$link_to_video_page_text = get_field('link_to_video_page_text');
 
 
-  <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries-->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
+get_header(); ?>
 
-<body>
-
-
-  <!--HEADER-->
-  <header class="site-header" role="banner" id="topofpage">
-
-
-    <!--NAVBAR-->
-    <div id="navbar" class="navbar-wrapper">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a id="logo" class="navbar-brand" href="index.html"><h2>HELEN OF JOY</h2></a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#music-player">Audio</a></li>
-              <li><a href="#featurette">Video</a></li>
-              <li><a href="#shows">Shows</a></li>
-              <li><a href="#blogsection">Blog</a></li>
-              <li><a href="contact.html"> Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
   <!--HERO-->
 
@@ -83,26 +42,25 @@
   </section>
 
   <!--BIO SECTION-->
-  <section id="bio-section">
+  <section id="bio-section" style="background-image: url(<?php echo $bio_background_image['url'] ?>);"
+    title="<?php echo $bio_background_image['alt'] ?>">
     <div class="container" id="bio-container">
       <div class="section-header">
-        <h2 id="bio-header">BIO</h2>
+        <h2 id="bio-header"><?php echo $bio_title; ?></h2>
       </i>
     </div>
-    <p class="lead">Helen of Joy is fronted by guitarist Michal Michalik and singer Jessica Royea. In 2014, Jess and Mike met to form an acoustic duo and played covers for a year before deciding to write their own music. In Fall 2015, they added a drummer and keyboardist
-      to help build the sound they were now creating.</p>
+    <p class="lead"><?php echo $bio_content; ?></p>
+</div>
+</section>
 
-    </div>
-  </section>
 
   <!--MUSIC PLAYER-->
   <section id="music-player">
     <div class="container">
       <div class="section-header col-sm-6 col-sm-offset-3">
-        <h2 id="#music-player-header">Featured Tune</h2>
-
-        <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=179786616/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=small/track=3899042535/transparent=true/" seamless><a href="http://helenofjoy.bandcamp.com/album/helen-of-joy-demos-16">Helen of Joy Demos &#39;16 by Helen of Joy</a></iframe>
-        <a href="audio.html" class="link-to-more">Hear more...</a>
+        <h2 id="#music-player-header"><?php echo $featured_song_section_title; ?></h2>
+          <?php echo $bandcamp_html_embed_code; ?>
+        <a href="audio.html" class="link-to-more"><?php echo $link_to_audio_page_text ; ?></a>
       </div>
     </div>
   </section>
@@ -112,9 +70,9 @@
     <div class="container">
       <div class="row section-header">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Featured Video</h2>
-          <iframe width="100%" height="415" src="https://www.youtube.com/embed/qKxvPuZjNVw" frameborder="0" allowfullscreen></iframe>
-          <a href="video.html" class="link-to-more">See more...</a>
+          <h2><?php echo $featured_video_section_title; ?></h2>
+          <?php echo $video_html_embed_code; ?><br>
+          <a href="video.html" class="link-to-more"><?php echo $link_to_video_page_text; ?></a>
         </div>
       </div>
     </div>
@@ -128,12 +86,19 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 section-header">
-          <h1>Shows</h1>
+          <h2>Shows</h2>
+
+          <?php $loop = new WP_Query(array('post_type' => 'project_feature',
+            'orderby' => 'post_id' , 'order' => 'ASC')); ?>
+
+          <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+
+          <?php endwhile; ?>
 
           <!--Shows go here-->
           <div class="row show">
             <div class="col-sm-6">
-              <img src="assets/img/creativemornings.jpg" alt="venue">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/creativemornings.jpg" alt="venue">
             </div>
             <div class="col-sm-4">
               <h3>Creative Mornings</h3>
@@ -148,7 +113,7 @@
           <!--Shows go here-->
           <div class="row show">
             <div class="col-sm-6">
-              <img src="assets/img/show_lescalier.jpg" alt="venue">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/show_lescalier.jpg" alt="venue">
             </div>
             <div class="col-sm-4">
               <h3>L'escalier</h3>
@@ -163,7 +128,7 @@
           <!--Shows go here-->
           <div class="row show">
             <div class="col-sm-6">
-              <img src="assets/img/brennan.jpg" alt="venue">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="venue">
             </div>
             <div class="col-sm-4">
               <h3>The Commodore Ballroom</h3>
@@ -178,7 +143,7 @@
           <!--Shows go here-->
           <div class="row show">
             <div class="col-sm-6">
-              <img src="assets/img/brennan.jpg" alt="venue">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="venue">
             </div>
             <div class="col-sm-4">
               <h3>The Commodore Ballroom</h3>
@@ -224,7 +189,7 @@
               </div>
             </header>
             <div class="post-image">
-              <img src="assets/img/hero-bg.jpg" alt="Hero image">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hero-bg.jpg" alt="Hero image">
             </div>
             <div class="post-excerpt">
               <p>This is the sample blog excerpt for your viewing pleasure. You can read more if you just click on the damn blog you jerk...<a href="post.html">continue reading &raquo;</a></p>
@@ -252,7 +217,7 @@
               </div>
             </header>
             <div class="post-image">
-              <img src="assets/img/hero-bg.jpg" alt="Hero image">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hero-bg.jpg" alt="Hero image">
             </div>
             <div class="post-excerpt">
               <p>This is the sample blog excerpt for your viewing pleasure. You can read more if you just click on the damn blog you jerk...<a href="post.html">continue reading &raquo;</a></p>
@@ -264,30 +229,5 @@
     </div>
   </section>
 
-  <!--FOOTER-->
-  <footer>
-    <div class="container">
-      <div>
 
-      </div>
-      <nav>
-        <ul class="list-unstyled list-inline footer-text">
-          <li><a href="blog.html">Blog Archive</a></li>
-          <li><a href="audio.html">Audio Archive</a></li>
-          <li><a href="video.html">Video Archive</a></li>
-          <li><a href="#topofpage">Once more from the top</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-<!-- BOOTSTRAP CORE JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="assets/js/jquery-3.1.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<?php get_footer(); ?>

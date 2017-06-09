@@ -78,8 +78,8 @@ function smoothScroll(eID) {
 
 
 function preload() {
-  moonflower = loadFont('assets/fonts/moon-flower.ttf');
-  img = loadImage("assets/img/helenofjoytall.jpg");
+  moonflower = loadFont('/wp-content/themes/helen-of-joy/assets/fonts/moon-flower.ttf');
+  img = loadImage("/wp-content/themes/helen-of-joy/assets/img/helenofjoytall.jpg");
 }
 
 function setup() {
@@ -162,7 +162,7 @@ function mousePressed() {
     smoothScroll('shows');
   }
   if (incircles[3] < circleDraw() / 2) {
-    smoothScroll('blogsection'); 
+    smoothScroll('blogsection');
   }
   if (incircles[4] < circleDraw() / 2) {
     window.location.href = "contact.html";
