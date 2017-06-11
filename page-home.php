@@ -78,9 +78,6 @@ get_header(); ?>
     </div>
   </section>
 
-
-
-
   <!--SHOWS-->
   <section id="shows">
     <div class="container">
@@ -88,80 +85,34 @@ get_header(); ?>
         <div class="col-sm-12 section-header">
           <h2>Shows</h2>
 
-          <?php $loop = new WP_Query(array('post_type' => 'project_feature',
+          <?php $loop = new WP_Query(array('post_type' => 'show',
             'orderby' => 'post_id' , 'order' => 'ASC')); ?>
 
           <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
-          <?php endwhile; ?>
-
-          <!--Shows go here-->
-          <div class="row show">
-            <div class="col-sm-6">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/creativemornings.jpg" alt="venue">
-            </div>
-            <div class="col-sm-4">
-              <h3>Creative Mornings</h3>
-              <p>Jan. 18th 2017 – L’Escalier @ 10 pm. Downtown, Mtl, QC. Free/Public. </p>
-              <span>
-              <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
-              -
-              <a href="www.google.com">Venue's Site</a>
-              </span>
-            </div>
-          </div>
-          <!--Shows go here-->
-          <div class="row show">
-            <div class="col-sm-6">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/show_lescalier.jpg" alt="venue">
-            </div>
-            <div class="col-sm-4">
-              <h3>L'escalier</h3>
-              <p>The show is at our favourite venue ever. We love playing for the Commodore he is a very nice man. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <span>
-              <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
-              -
-              <a href="www.google.com">Venue's Site</a>
-              </span>
+            <div class="row show">
+              <div class="col-sm-6">
+                <?php  if (  has_post_thumbnail() ) {//check for post image
+                       the_post_thumbnail( array(200,200) );
+                    }
+                ?>
               </div>
-          </div>
-          <!--Shows go here-->
-          <div class="row show">
-            <div class="col-sm-6">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="venue">
+              <div class="col-sm-4">
+                <h3><?php the_title(); ?></h3>
+                <p><?php the_content(); ?></p>
+                <span>
+                <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
+                -
+                <a href="www.google.com">Venue's Site</a>
+                </span>
+              </div>
             </div>
-            <div class="col-sm-4">
-              <h3>The Commodore Ballroom</h3>
-              <p>The show is at our favourite venue ever. We love playing for the Commodore he is a very nice man.</p>
-              <span>
-              <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
-              -
-              <a href="www.google.com">Venue's Site</a>
-              </span>
-            </div>
-          </div>
-          <!--Shows go here-->
-          <div class="row show">
-            <div class="col-sm-6">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="venue">
-            </div>
-            <div class="col-sm-4">
-              <h3>The Commodore Ballroom</h3>
-              <p>The show is at our favourite venue ever. We love playing for the Commodore he is a very nice man.</p>
-              <span>
-              <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
-              -
-              <a href="www.google.com">Venue's Site</a>
-              </span>
-            </div>
-          </div>
-
+          <?php endwhile; ?>
 
         </div>
       </div>
     </div>
   </section>
-
 
   <!--BLOG-->
   <section class="blog" id="blogsection">
