@@ -89,6 +89,7 @@ get_header(); ?>
             'orderby' => 'post_id' , 'order' => 'ASC')); ?>
 
           <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+          <!--Need to implement looping through these show posts for dates/times-->
 
             <div class="row show">
               <div class="col-sm-6">
