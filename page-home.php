@@ -101,7 +101,7 @@ get_header(); ?>
               <div class="col-sm-4">
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_content(); ?></p>
-                <span id="show-date-time"><?php the_field('show_date'); ?>, <?php the_field('show_time'); ?></br></span>
+                <span id="show-date-time"><?php $show_date = DateTime::createFromFormat('Ymd',  get_field('show_date')); echo $show_date->format('Ymd'); ?>, <?php the_field('show_time'); ?></br></span>
                 <span>
                 <a href="<?php the_field('venue_location'); ?>">Location</a>
                 -
