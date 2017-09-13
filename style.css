@@ -527,6 +527,9 @@ section {
 	color: #111;
 }
 
+/* SHOWS SECTION */
+
+
 #shows {
 	text-align: center;
 	-moz-box-shadow: 0 0 5px 5px #111;
@@ -564,6 +567,10 @@ section {
 
 .show div a {
 	font-size: 25px;
+}
+
+#show-date-time {
+font-weight:bold;
 }
 
 #signup {
@@ -666,7 +673,7 @@ footer li.signup-link a:hover {
 .post, .widget {
 	position: relative;
 	background-color: #3e4249;
-	opacity: 0.8;
+	opacity: 0.9;
 	border: solid 1px #ddd;
 	color: white;
 	padding: 20px;

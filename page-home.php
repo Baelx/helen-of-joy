@@ -22,11 +22,6 @@ $featured_video_background_image = get_field('featured_video_background_image');
 $video_html_embed_code = get_field('video_html_embed_code');
 $link_to_video_page_text = get_field('link_to_video_page_text');
 
-// Show Section
-
-$show_date = get_field('show_date');
-$show_time = get_field('show_time');
-
 
 get_header(); ?>
 
@@ -106,12 +101,11 @@ get_header(); ?>
               <div class="col-sm-4">
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_content(); ?></p>
-                <p><?php echo $show_date; ?></p>
-                <p><?php echo $show_time; ?></p>
+                <span id="show-date-time"><?php the_field('show_date'); ?>, <?php the_field('show_time'); ?></br></span>
                 <span>
-                <a href="https://goo.gl/maps/E5oFCxjUtk32">Location</a>
+                <a href="<?php the_field('venue_location'); ?>">Location</a>
                 -
-                <a href="www.google.com">Venue's Site</a>
+                <a href="<?php the_field('venue_site'); ?>">Venue's Site</a>
                 </span>
               </div>
             </div>
