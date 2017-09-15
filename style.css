@@ -570,7 +570,8 @@ section {
 }
 
 #show-date-time {
-font-weight:bold;
+color:black;
+font-size:1.5em;
 }
 
 #signup {

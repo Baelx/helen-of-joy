@@ -5,22 +5,26 @@
 
 // CUSTOM FIELDS
 
-// Bio Section
+// Bio Variables
 $bio_title = get_field('bio_title');
 $bio_content = get_field('bio_content');
 $bio_background_image = get_field('bio_background_image');
 
-// Audio Section
+// Audio Variables
 $featured_song_section_title = get_field('featured_song_section_title');
 $bandcamp_html_embed_code = get_field('bandcamp_html_embed_code');
 $link_to_audio_page_text = get_field('link_to_audio_page_text');
 
-// Video Section
+// Video Variables
 
 $featured_video_section_title = get_field('featured_video_section_title');
 $featured_video_background_image = get_field('featured_video_background_image');
 $video_html_embed_code = get_field('video_html_embed_code');
 $link_to_video_page_text = get_field('link_to_video_page_text');
+
+// Show Variables
+
+
 
 
 get_header(); ?>
@@ -88,8 +92,8 @@ get_header(); ?>
           <?php $loop = new WP_Query(array('post_type' => 'show',
             'orderby' => 'post_id' , 'order' => 'ASC')); ?>
 
+
           <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
-          <!--Need to implement looping through these show posts for dates/times-->
 
             <div class="row show">
               <div class="col-sm-6">
@@ -101,7 +105,7 @@ get_header(); ?>
               <div class="col-sm-4">
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_content(); ?></p>
-                <span id="show-date-time"><?php DateTime::createFromFormat('m d y', the_field('show_date'));?>, <?php the_field('show_time'); ?></br></span>
+                <span id="show-date-time"><?php  $date = DateTime::createFromFormat('dmY', get_field('show_date')); echo $date->format('D jS F Y'); ?>, <?php the_field('show_time'); ?></br></span>
                 <span>
                 <a href="<?php the_field('venue_location'); ?>">Location</a>
                 -
