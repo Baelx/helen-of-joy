@@ -6,7 +6,7 @@
         <h2>Shows</h2>
 
         <?php $loop = new WP_Query(array('post_type' => 'show',
-          'orderby' => 'post_id' , 'order' => 'ASC')); ?>
+          'orderby' => 'post_date' , 'order' => 'ASC')); ?>
 
 
         <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
