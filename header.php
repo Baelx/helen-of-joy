@@ -23,9 +23,12 @@
 <link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <!--Styles-->
 
-<!--p5.js links for image map -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/p5.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/sketch.js"></script>
+<?php if( is_page('home') ) : ?>
+	<!--p5.js links for image map -->
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/p5.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/sketch.js"></script>
+<?php endif; ?>
+
 <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
 
 <?php wp_head(); ?>

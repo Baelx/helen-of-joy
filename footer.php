@@ -15,11 +15,10 @@
 
 
 <!--FOOTER-->
+<?php if( is_page('home') ) : ?>
+
 <footer>
 	<div class="container">
-		<div>
-
-		</div>
 		<nav>
 			<ul class="list-unstyled list-inline footer-text">
 				<li><a href="blog.html">Blog Archive</a></li>
@@ -30,7 +29,10 @@
 		</nav>
 	</div>
 </div>
+
 </footer>
+<?php endif; ?>
+
 
 
 <!-- BOOTSTRAP CORE JS -->

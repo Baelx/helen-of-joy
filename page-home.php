@@ -5,7 +5,6 @@
 
 get_header(); ?>
 
-
   <!--HERO-->
 
   <section id="hero">

@@ -633,6 +633,9 @@ footer li.signup-link a:hover {
 #audiopage {
 	background: url('/wp-content/themes/helen-of-joy/assets/img/dark-blur.jpg') no-repeat fixed center;
 }
+#audiopage > div {
+height:100%;
+}
 
 #videopage {
 	background: url('/wp-content/themes/helen-of-joy/assets/img/water-blur.jpeg') no-repeat fixed center;

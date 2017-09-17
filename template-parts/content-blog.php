@@ -1,14 +1,35 @@
+<?php
+$args = array(
+	'posts_per_page' => 2,
+	'orderby' => 'post_date',
+	'order' => 'DESC',
+	'post_type' => 'post',
+);
+?>
+
+<?php
+// the query
+$recent_posts = new WP_Query( $args ); ?>
+
+
 <!--BLOG-->
 <section class="blog" id="blogsection">
   <div class="container">
     <div class="row section-header" id="primary">
       <h2>RECENT BLOG ENTRIES</h2>
+      <?php if ( $recent_posts->have_posts() ) : ?>
+
+          <!-- pagination here -->
+
+          <!-- the loop -->
+          <?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
+
+
       <main id="content" class="col-sm-6" role="main">
         <article class="post">
           <header>
             <h3>
-              <a href="post.html">Blog Title Here
-              </a>
+              <a href="post.html"><?php the_title(); ?></a>
             </h3>
             <div class="post-details">
               <i class="fa fa-user">Jess</i>
@@ -17,7 +38,7 @@
               <a href="">Tutorials</a>
               <a href="">Coding</a>
               <i class="fa fa-tags"></i>
-              <a href="">premium</a><a href="">tag   </a><a href="">another tag</a><a href="">sup</a>
+              <?php the_tags('<div class="entry-meta">Tagged with: ',' • ','</div><br />');  ?> 
               <div class="post-comments-badge">
                 <a href=""><i class="fa fa-comments">168</i></a>
               </div>
@@ -27,38 +48,20 @@
             <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hero-bg.jpg" alt="Hero image">
           </div>
           <div class="post-excerpt">
-            <p>This is the sample blog excerpt for your viewing pleasure. You can read more if you just click on the damn blog you jerk...<a href="post.html">continue reading &raquo;</a></p>
+            <p><?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a></p>
           </div>
         </article>
       </main>
-      <main id="content" class="col-sm-6" role="main">
-        <article class="post">
-          <header>
-            <h3>
-              <a href="post.html">Blog Title Here
-              </a>
-            </h3>
-            <div class="post-details">
-              <<i class="fa fa-user">Jess</i>
-              <i class="fa fa-clock-o">Jan 1, 2017</i>
-              <i class="fa fa-folder"></i>
-              <a href="">Tutorials</a>
-              <a href="">Coding</a>
-              <i class="fa fa-tags"></i>
-              <a href="">premium</a><a href="">tag   </a><a href="">another tag</a><a href="">sup</a>
-              <div class="post-comments-badge">
-                <a href=""><i class="fa fa-comments">168</i></a>
-              </div>
-            </div>
-          </header>
-          <div class="post-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hero-bg.jpg" alt="Hero image">
-          </div>
-          <div class="post-excerpt">
-            <p>This is the sample blog excerpt for your viewing pleasure. You can read more if you just click on the damn blog you jerk...<a href="post.html">continue reading &raquo;</a></p>
-          </div>
-        </article>
-      </main>
+
+    <?php endwhile; ?>
+    <!-- end of the loop -->
+
+    <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+    <p><?php _e( 'No recent posts :\'(' ); ?></p>
+    <?php endif; ?>
+
       <a href="blog.html" class="link-to-more">Read More...</a>
     </div>
   </div>
