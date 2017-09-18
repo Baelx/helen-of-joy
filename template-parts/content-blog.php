@@ -38,7 +38,7 @@ $recent_posts = new WP_Query( $args ); ?>
               <a href="">Tutorials</a>
               <a href="">Coding</a>
               <i class="fa fa-tags"></i>
-              <?php the_tags('<div class="entry-meta">Tagged with: ',' • ','</div><br />');  ?> 
+              <p><?php the_tags( 'Tags: ', ', ', '<br />' ); ?></a>
               <div class="post-comments-badge">
                 <a href=""><i class="fa fa-comments">168</i></a>
               </div>

@@ -1,6 +1,6 @@
 <?php
 
-// Audio Variables
+// Variables
 $featured_song_section_title = get_field('featured_song_section_title');
 $bandcamp_html_embed_code = get_field('bandcamp_html_embed_code');
 $link_to_audio_page_text = get_field('link_to_audio_page_text');

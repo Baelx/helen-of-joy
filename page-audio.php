@@ -4,6 +4,13 @@
 */
 
 get_header();
+
+//Variables
+
+$audio_embed_code = get_field('audio_embed_code');
+$second_audio_embed_code = get_field('second_audio_embed_code');
+$third_audio_embed_code = get_field('third_audio_embed_code');
+
  ?>
 
  <div id="audiopage">
@@ -37,14 +44,17 @@ get_header();
      </div>
    </header>
 
-   <div class="container media-page">
-     <div width="100%">
-     <iframe id="audiopageplayer" class="media-player" src="https://bandcamp.com/EmbeddedPlayer/album=179786616/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless>
-       <a href="http://helenofjoy.bandcamp.com/album/helen-of-joy-demos-16">Helen of Joy Demos &#39;16 by Helen of Joy</a></iframe>
-     </div>
+   <div class="media-page">
+     <div>
+       <?php echo $audio_embed_code; ?>
+    </div>
+    <div>
+      <?php echo $second_audio_embed_code; ?>
    </div>
-
+   <div>
+     <?php echo $third_audio_embed_code; ?>
   </div>
+   </div>
 
 <?php
 
