@@ -1,7 +1,7 @@
 <?php // Video Variables
 
 $featured_video_section_title = get_field('featured_video_section_title');
-$featured_video_background_image = get_field('featured_video_background_image');
+$featured_image = get_field('featured_video_background_image');
 $video_html_embed_code = get_field('video_html_embed_code');
 $link_to_video_page_text = get_field('link_to_video_page_text');
 
@@ -9,7 +9,7 @@ $link_to_video_page_text = get_field('link_to_video_page_text');
 
 
 <!--VIDEO FEATURETTE-->
-<section id="featurette">
+<section id="featurette" style="background:<?php echo $featured_image; ?>">
   <div class="container">
     <div class="row section-header">
       <div class="col-sm-8 col-sm-offset-2">

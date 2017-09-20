@@ -4,11 +4,11 @@
 $featured_song_section_title = get_field('featured_song_section_title');
 $bandcamp_html_embed_code = get_field('bandcamp_html_embed_code');
 $link_to_audio_page_text = get_field('link_to_audio_page_text');
-
+$featured_image = get_field('')
 ?>
 
 <!--MUSIC PLAYER-->
-<section id="music-player">
+<section id="music-player" style="background:<?php echo $featured_image; ?>">
   <div class="container">
     <div class="section-header col-sm-6 col-sm-offset-3">
       <h2 id="#music-player-header"><?php echo $featured_song_section_title; ?></h2>

@@ -10,6 +10,7 @@ get_header();
 $audio_embed_code = get_field('audio_embed_code');
 $second_audio_embed_code = get_field('second_audio_embed_code');
 $third_audio_embed_code = get_field('third_audio_embed_code');
+$background_image = get_field('$background_image');
 
  ?>
 
@@ -55,6 +56,12 @@ $third_audio_embed_code = get_field('third_audio_embed_code');
      <?php echo $third_audio_embed_code; ?>
   </div>
    </div>
+
+<style>
+body.page-id-67 {
+background-image:bullshit;
+}
+</style>
 
 <?php
 

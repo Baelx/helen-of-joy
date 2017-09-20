@@ -338,7 +338,7 @@ object {
 body {
 	font-family: 'Moon Flower Bold', Helvetica, sans-serif;
 	font-size: 20px;
-	background: url('/wp-content/themes/helen-of-joy/assets/img/tile.jpg') top left repeat;
+	background-color: #3E4249;
 	scroll-behaviour: smooth;
 }
 
@@ -862,6 +862,16 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 
 
 /* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width:800px) {
+	.media-page {
+	margin-top:3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+}
 
 @media screen and (max-width: 991px) {
 	#instructor .container {
