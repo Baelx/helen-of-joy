@@ -61,6 +61,10 @@ body.page-id-67 {
 background-image:url("<?php if( get_field('background_image') ):
 the_field('background_image');
 endif; ?>");
+background-position: center;
+background-size: cover;
+height:100%;
+margin:0;
 }
 </style>
 

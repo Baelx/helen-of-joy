@@ -334,6 +334,10 @@ object {
 	src: url('/wp-content/themes/helen-of-joy/assets/fonts/moon-flower-bold.ttf')/* TTF file for CSS3 browsers */
 }
 
+html {
+height:100%;
+margin:0;
+}
 
 body {
 	font-family: 'Moon Flower Bold', Helvetica, sans-serif;
