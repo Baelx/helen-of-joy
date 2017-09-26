@@ -5,11 +5,16 @@
 
 get_header();
 
+// Variables
+
+$video_embed_code = get_field('video_embed_code');
+
+
 ?>
 
 
 
-<body id="videopage">
+<body class="media-page">
   <!--HEADER-->
   <header class="site-header" role="banner">
     <!--NAVBAR-->
@@ -41,8 +46,8 @@ get_header();
   </header>
 
   <div class="container media-page">
-    <div class="embed-responsive embed-responsive-16by9" id="videopageplayer"> <iframe class="media-player embed-responsive-item" width="1100" height="600" src="https://www.youtube.com/embed/videoseries?list=PLDqwCs9mq6hxFB32sJnqQIGMwnz_Rp7lz" frameborder="0" allowfullscreen>
-      </iframe>
+    <div>
+			<?php echo $video_embed_code; ?>
     </div>
   </div>
 
@@ -50,7 +55,7 @@ get_header();
 
 
 <style>
-body.page-id-67 {
+body.page-id-76 {
 background-image:url("<?php if( get_field('background_image') ):
 the_field('background_image');
 endif; ?>");
@@ -59,6 +64,7 @@ background-size: cover;
 height:100%;
 margin:0;
 }
+
 </style>
 
 <?php
