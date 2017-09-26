@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Baelx/helen-of-joy/issues"
   },
-  "homepage": "https://github.com/Baelx/helen-of-joy#readme"
+  "homepage": "https://github.com/Baelx/helen-of-joy#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-watch": "^4.3.11"
+  }
 }

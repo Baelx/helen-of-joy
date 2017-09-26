@@ -46,6 +46,7 @@ $video_embed_code = get_field('video_embed_code');
   </header>
 
   <div class="container media-page">
+
     <div>
 			<?php echo $video_embed_code; ?>
     </div>
