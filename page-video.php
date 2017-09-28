@@ -35,7 +35,6 @@ $video_embed_code = get_field('video_embed_code');
               <li><a href="audio.html">Audio</a></li>
               <li><a href="video.html">Video</a></li>
               <li><a href="index.html#shows">Shows</a></li>
-              <!--need to fix this to point to the shows location on the main page later-->
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html"> Contact</a></li>
             </ul>

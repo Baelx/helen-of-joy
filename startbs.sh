@@ -1,2 +1,2 @@
 #!/bin/bash
-browser-sync start --proxy="localhost" --files="*.css, *.php"
+browser-sync start --proxy "localhost" --files "*.php, *.css, **/*.php, **/*.css" --no-open
