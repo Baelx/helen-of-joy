@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Audio Page
+  Template Name: Video Page
 */
 
 get_header();
