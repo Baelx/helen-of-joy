@@ -13,10 +13,10 @@ $third_audio_embed_code = get_field('third_audio_embed_code');
 
  ?>
 
- <div id="audiopage">
-   <!--HEADER-->
+ <!-- <div id="audiopage">
+  
    <header class="site-header" role="banner">
-     <!--NAVBAR-->
+
      <div class="navbar-wrapper">
        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
          <div class="container">
@@ -34,7 +34,7 @@ $third_audio_embed_code = get_field('third_audio_embed_code');
                <li><a href="audio.html">Audio</a></li>
                <li><a href="video.html">Video</a></li>
                <li><a href="index.html#shows">Shows</a></li>
-               <!--need to fix this to point to the shows location on the main page later-->
+
                <li><a href="blog.html">Blog</a></li>
                <li><a href="contact.html">Contact</a></li>
              </ul>
@@ -42,7 +42,7 @@ $third_audio_embed_code = get_field('third_audio_embed_code');
          </div>
        </div>
      </div>
-   </header>
+   </header> -->
 
    <div class="media-page">
      <div>
