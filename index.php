@@ -12,7 +12,13 @@
  * @package helen-joy
  */
 
-get_header(); ?>
+// Variables
+
+$background_image = get_field('background_image');
+
+get_header();
+
+?>
 
 
 <!--Blog content-->
@@ -61,15 +67,14 @@ get_header(); ?>
 </div>
 
 <style>
-body.page-id-67 {
-background-image:url("<?php if( get_field('background_image') ):
-the_field('background_image');
-endif; ?>");
+body.blog {
+background-image:url("<?php echo $background_image; ?>");
 background-position: center;
 background-size: cover;
 height:100%;
 margin:0;
 }
+<?php echo $backgound_image; ?>
 </style>
 
 <?php
