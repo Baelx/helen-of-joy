@@ -14,7 +14,14 @@
 
 // Variables
 
-$background_image = get_field('background_image');
+$post_id = false;
+
+// if( is_home() )
+// {
+// 	$post_id = 123; // specific ID of home page
+// }
+
+$background_image = get_field('background_image', $post_id);
 
 get_header();
 
@@ -68,13 +75,21 @@ get_header();
 
 <style>
 body.blog {
-background-image:url("<?php echo $background_image; ?>");
+background-image:url("<?php
+
+ if($background_image){
+	echo $background_image;
+} else {
+	echo $post_id;
+};
+
+ ?>");
 background-position: center;
 background-size: cover;
 height:100%;
 margin:0;
 }
-<?php echo $backgound_image; ?>
+
 </style>
 
 <?php
