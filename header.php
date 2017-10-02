@@ -27,6 +27,7 @@
 	<!--p5.js links for image map -->
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/p5.min.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/sketch.js"></script>
+	<style> #navbar { display:none;} </style>
 <?php endif; ?>
 
 <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
@@ -63,7 +64,7 @@
 					<?php
 						wp_nav_menu( array(
 								'theme_location' => 'primary',
-								'container' =>	'div',
+								'container' =>	'nav',
 								'container_class' => 'navbar-collapse collapse',
 								'menu_class' => 'nav navbar-nav navbar-right',
 						)	);

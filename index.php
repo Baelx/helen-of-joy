@@ -16,10 +16,11 @@
 
 $post_id = false;
 
-// if( is_home() )
-// {
-// 	$post_id = 123; // specific ID of home page
-// }
+if( is_home() )
+
+{
+	$post_id = 123; // specific ID of home page
+}
 
 $background_image = get_field('background_image', $post_id);
 
@@ -75,17 +76,11 @@ get_header();
 
 <style>
 body.blog {
-background-image:url("<?php
-
- if($background_image){
-	echo $background_image;
-} else {
-	echo $post_id;
-};
-
- ?>");
-background-position: center;
-background-size: cover;
+	background-image: url('/wp-content/themes/helen-of-joy/assets/img/red-blur.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 height:100%;
 margin:0;
 }
