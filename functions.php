@@ -172,3 +172,9 @@ function change_post_object_label() {
     }
     add_action( 'init', 'change_post_object_label' );
     add_action( 'admin_menu', 'change_post_menu_label' );
+
+function my_page_menu_args( $args ) {
+    $args['show_home'] = false;
+    return $args;
+}
+add_filter( 'wp_page_menu_args', 'my_page_menu_args' );

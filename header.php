@@ -46,7 +46,6 @@
 	<!--HEADER-->
   <header class="site-header" role="banner" id="topofpage">
 
-
     <!--NAVBAR-->
     <div id="navbar" class="navbar-wrapper">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -58,13 +57,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a id="logo" class="navbar-brand" href="index.html"><h2>HELEN OF JOY</h2></a>
+            <a id="logo" class="navbar-brand" href="<?php echo home_url(); ?>"><h2>HELEN OF JOY</h2></a>
           </div>
 
 					<?php
 						wp_nav_menu( array(
 								'theme_location' => 'primary',
-								'container' =>	'nav',
+								'container' =>	'ul',
 								'container_class' => 'navbar-collapse collapse',
 								'menu_class' => 'nav navbar-nav navbar-right',
 						)	);
