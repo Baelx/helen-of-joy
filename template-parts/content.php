@@ -26,10 +26,19 @@
 				<i class="fa fa-tags"></i> <?php the_tags('',',',''); ?>
 
 				<div class="post-comments-badge">
-					<a href=""><i class="fa fa-comments"></i> <?php comments_number(0,1,'%'); ?></a>
+					<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number(0,1,'%'); ?></a>
 				</div><!-- post-comments-badge -->
-			 <div><?php edit_post_link( 'Edit this post', '<div><i class="fa fa-pencil"></i>', '</div>'); ?></div>
+				<?php edit_post_link( 'Edit this post', '<i class="fa fa-pencil"></i>', ''); ?>
 			</div><!-- post-details -->
+
+			<?php if ( has_post_thumbnail() ) { ?>
+			<div class="post-image">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- post-image -->
+			<?php } ?>
+			<div class="post-excerpt">
+				<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
+			</div><!-- post-excerpt -->
 
 		<?php
 		endif; ?>

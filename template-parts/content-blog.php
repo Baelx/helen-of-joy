@@ -44,11 +44,13 @@ $recent_posts = new WP_Query( $args ); ?>
               </div>
             </div>
           </header>
-          <div class="post-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hero-bg.jpg" alt="Hero image">
-          </div>
+					<?php if ( has_post_thumbnail() ) { ?>
+					<div class="post-image">
+						<?php the_post_thumbnail(); ?>
+					</div><!-- post-image -->
+					<?php } ?>
           <div class="post-excerpt">
-            <p><?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a></p>
+            <?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
           </div>
         </article>
       </main>
