@@ -631,7 +631,7 @@ background-color:#303030;
 
 /* --BLOG -- */
 
-#blogpage {
+#blogpage, .single-post {
 	background: url('/wp-content/themes/helen-of-joy/assets/img/red-blur.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

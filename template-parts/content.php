@@ -31,6 +31,10 @@
 				<?php edit_post_link( 'Edit this post', '<i class="fa fa-pencil"></i>', ''); ?>
 			</div><!-- post-details -->
 
+			<?php
+			endif; ?>
+		</header>
+
 			<?php if ( has_post_thumbnail() ) { ?>
 			<div class="post-image">
 				<?php the_post_thumbnail(); ?>
@@ -40,8 +44,6 @@
 				<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
 			</div><!-- post-excerpt -->
 
-		<?php
-		endif; ?>
 
 	<footer class="entry-footer">
 		<?php helen_of_joy_entry_footer(); ?>
