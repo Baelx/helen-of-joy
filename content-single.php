@@ -1,6 +1,6 @@
 <?php
 /**
- * @package helenofjoynew
+ * @package helen-joy
  */
 get_header();
 ?>
