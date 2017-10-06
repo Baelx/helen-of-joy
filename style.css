@@ -670,6 +670,7 @@ background-color:#303030;
 	color: white;
 	padding: 20px;
 	margin: 0 0 40px;
+	font-size:1.25em;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
@@ -678,6 +679,14 @@ background-color:#303030;
 
 .post header, .post .post-excerpt .post .post-body {
 	padding: 20px;
+}
+
+.post-excerpt {
+	font-size:1.1em;
+}
+
+.entry-title {
+	font-size:1.5em;
 }
 
 .post-body {
