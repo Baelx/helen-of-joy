@@ -31,6 +31,11 @@ $recent_posts = new WP_Query( $args ); ?>
             <h3>
               <a href="post.html"><?php the_title(); ?></a>
             </h3>
+						<?php if ( has_post_thumbnail() ) { ?>
+						<div class="post-image">
+							<?php the_post_thumbnail(); ?>
+						</div><!-- post-image -->
+						<?php } ?>
             <div class="post-details">
               <i class="fa fa-user">Jess</i>
               <i class="fa fa-clock-o">Jan 1, 2017</i>
@@ -39,16 +44,8 @@ $recent_posts = new WP_Query( $args ); ?>
               <a href="">Coding</a>
               <i class="fa fa-tags"></i>
               <p><?php the_tags( 'Tags: ', ', ', '<br />' ); ?></a>
-              <div class="post-comments-badge">
-                <a href=""><i class="fa fa-comments">168</i></a>
-              </div>
             </div>
           </header>
-					<?php if ( has_post_thumbnail() ) { ?>
-					<div class="post-image">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- post-image -->
-					<?php } ?>
           <div class="post-excerpt">
             <?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
           </div>

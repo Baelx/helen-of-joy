@@ -373,6 +373,18 @@ h4 {
 	font-size: 18px;
 }
 
+/* Floating box container */
+
+	#bio-container, .post  {
+		background-color: #3e4249;
+		opacity: 0.8;
+		border: solid 1px #ddd;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		box-shadow: 6px 6px 5px #888888;
+}
+
 #logo {
 	top: -5px;
 	position: relative;
@@ -456,17 +468,10 @@ section {
 
 #bio-container {
 	padding-top: 20px;
-	background-color: #3e4249;
-	opacity: 0.8;
-	border: solid 1px #ddd;
 	color: black;
 	margin-top: 100px;
 	margin-bottom: 100px;
 	width: 50%;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	box-shadow: 6px 6px 5px #888888;
 }
 
 #bio-section p {
@@ -664,21 +669,15 @@ background-color:#303030;
 
 .post, .widget {
 	position: relative;
-	background-color: #3e4249;
-	opacity: 0.9;
 	border: solid 1px #ddd;
 	color: white;
-	padding: 20px;
+	padding: 0 20px;
 	margin: 0 0 40px;
 	font-size:1.25em;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	box-shadow: 6px 6px 5px #888888;
 }
 
 .post header, .post .post-excerpt .post .post-body {
-	padding: 20px;
+	padding: 0 20px;
 }
 
 .post-excerpt {
@@ -694,9 +693,8 @@ background-color:#303030;
 }
 
 .post header h1, .post header h3 {
-	margin: 0 0 15px;
-	padding: 0 0 15px;
-	border-bottom: solid 1px #ddd;
+	margin:0;
+	padding:0.5em 0;
 }
 
 header h3 {
@@ -716,7 +714,16 @@ header h3 a:hover {
 }
 
 .post-image img{
-	height: auto;
+	height: 8em;
+	width:100%;
+	z-index: -1;
+  position: relative;
+	border-radius: 5px;
+}
+.post-image {
+	box-shadow: inset 0 0 1em #222;
+	border:1px solid #212121;
+	border-radius:5px;
 }
 
 .post-details {
@@ -769,54 +776,6 @@ iframe {
 
 
 /* Comments */
-
-.post-comments-badge {
-	height: 70px;
-	width: 70px;
-	position: absolute;
-	top: 8px;
-	right: 10px;
-	border: none;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
-	background: #f9628d;
-	text-align: center;
-	display: table;
-}
-
-.post-comments-badge a {
-	display: table-cell;
-	vertical-align: middle;
-	color: white;
-	font-size: 20px;
-	line-height: 20px;
-	text-decoration: none;
-}
-
-.post-comments-badge i.fa {
-	display: block;
-	font-size: 15px;
-	padding: 0px;
-	margin-bottom: 4px;
-}
-
-.post-comments-badge:hover {
-	background-color: #d8557a;
-}
-
-/*#comments footer {
-	background:none;
-	color: inherit;
-}
-
-#comments footer a {
-	color: inherit;
-}
-
-#comments .comment-metadata {
-	margin:10px 0 0;
-}*/
 
 #bottom-logo {
 	font-size: 2em;
