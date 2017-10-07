@@ -636,7 +636,7 @@ background-color:#303030;
 
 /* --BLOG -- */
 
-#blogpage, .single-post {
+#blogpage, .single-post, #postpage, .search, .archive {
 	background: url('/wp-content/themes/helen-of-joy/assets/img/red-blur.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -657,14 +657,6 @@ background-color:#303030;
 #primary {
 	padding-top: 80px;
 	padding-bottom: 40px;
-}
-
-#postpage {
-	background: url('/wp-content/themes/helen-of-joy/assets/img/red-blur.jpg');
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 
 .post, .widget {

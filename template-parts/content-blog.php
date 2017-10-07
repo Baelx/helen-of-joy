@@ -29,7 +29,7 @@ $recent_posts = new WP_Query( $args ); ?>
         <article class="post">
           <header>
             <h3>
-              <a href="post.html"><?php the_title(); ?></a>
+              <a href="<?php get_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
 						<?php if ( has_post_thumbnail() ) { ?>
 						<div class="post-image">
@@ -47,7 +47,7 @@ $recent_posts = new WP_Query( $args ); ?>
             </div>
           </header>
           <div class="post-excerpt">
-            <?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
+            <?php the_excerpt(); ?><a href="<?php get_permalink(); ?>">continue reading &raquo;</a>
           </div>
         </article>
       </main>
