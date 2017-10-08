@@ -44,6 +44,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	display: block;
 }
 
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+color:white;
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -766,9 +771,6 @@ iframe {
 	box-shadow: 4px 4px 5px black;
 }
 
-
-/* Comments */
-
 #bottom-logo {
 	font-size: 2em;
 }
@@ -819,10 +821,23 @@ input[type="submit"], button[type="submit"] {
 	border-radius: 6px;
 }
 
+#contact-name, #contact-email, #contact-subject, #contact-word {
+  font-family:times;
+}
+
 input[type="submit"]:hover, button[type="submit"]:hover {
 	outline: none;
 	border: none;
 	background: #aaa;
+}
+
+/* Contact Page */
+
+body.page-id-97 div#page.site div.container div#primary.row {
+  padding-top:10px;
+}
+body.page-id-97 > div > section {
+  padding-bottom:10px;
 }
 
 

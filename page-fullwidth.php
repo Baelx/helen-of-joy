@@ -32,12 +32,3 @@ get_header();
 </div><!-- container -->
 
 <?php get_footer(); ?>
-
-<style>
-body.page-id-97 div#page.site div.container div#primary.row {
-  padding-top:10px;
-}
-body.page-id-97 > div > section {
-  padding-bottom:10px;
-}
-</style>
