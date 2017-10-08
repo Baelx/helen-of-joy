@@ -11,20 +11,35 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php
+		if ( is_single() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php helen_of_joy_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		if ( 'post' === get_post_type() ) : ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<?php if ( has_post_thumbnail() ) { ?>
+		<div class="post-image">
+			<?php the_post_thumbnail(); ?>
+		</div><!-- post-image -->
+		<?php } ?>
 
-	<footer class="entry-footer">
-		<?php helen_of_joy_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+			<div class="post-details">
+				<i class="fa fa-user"></i><?php the_author(); ?>
+				<i class="fa fa-clock-o"></i> <time><?php the_date(); ?></time>
+				<i class="fa fa-folder"></i> <?php the_category(', '); ?>
+				<i class="fa fa-tags"></i> <?php the_tags('',',',''); ?>
+
+				<?php edit_post_link( 'Edit this post', '<i class="fa fa-pencil"></i>', ''); ?>
+			</div><!-- post-details -->
+
+			<?php
+			endif; ?>
+		</header>
+
+			<div class="post-excerpt">
+				<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
+			</div><!-- post-excerpt -->
 </article><!-- #post-## -->

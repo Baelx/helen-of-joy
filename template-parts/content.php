@@ -42,9 +42,4 @@
 			<div class="post-excerpt">
 				<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
 			</div><!-- post-excerpt -->
-
-
-	<footer class="entry-footer">
-		<?php helen_of_joy_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
