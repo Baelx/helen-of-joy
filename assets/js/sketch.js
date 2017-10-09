@@ -9,22 +9,24 @@ var incircles = [];
 var circlew = 27;
 var textOpacity = 0;
 
+//function to allow for responsive drawing of words
 var fontDraw = function() {
   if (sw >= 1200) {
     return imgh / 49;
   } else if (sw >= 700) {
-    return imgh / 35;
-  } else {
-    return imgh / 25;
+    return imgh / 35; //was 35
+  } else if (sw < 700) {
+    return imgh / 40; //was 25
   }
 }
+//function to allow for responsive drawing of circles
 var circleDraw = function() {
   if (sw >= 1000) {
     return circlew;
   } else if (sw < 1000) {
-    return circlew - 7;
-  } else {
-    return circlew - 15;
+    return circlew - 20; //was 7
+  } else if (sw < 700){
+    return circlew / 5; //was 15
   }
 }
 
@@ -39,8 +41,6 @@ function currentYPosition() {
     if (document.body.scrollTop) return document.body.scrollTop;
     return 0;
 }
-
-
 function elmYPosition(eID) {
     var elm = document.getElementById(eID);
     var y = elm.offsetTop;

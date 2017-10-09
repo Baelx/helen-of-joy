@@ -45,7 +45,6 @@ function helen_of_joy_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'helen-of-joy' ),
 		'home' => esc_html__( 'Home', 'helen-of-joy' ),
-		'404' => esc_html__( '404', 'helen-of-joy' )
 	) );
 
 	/*

@@ -10,7 +10,11 @@
 get_header(); ?>
 
 <section class="section-header">
-	<h1 id="404-text">Page not found</h1>
+	<h1 style="color:black;text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;">Page not found</h1>
 </section>
 
 <?php
