@@ -48,7 +48,7 @@
 
     <!--NAVBAR-->
     <div id="navbar" class="navbar-wrapper">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar <?php if ( is_404() === 'false') { echo 'navbar-inverse'; }; ?> navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,24 +61,22 @@
           </div>
 
 					<?php
-						wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'container' =>	'ul',
-								'container_class' => 'navbar-collapse collapse',
-								'menu_class' => 'nav navbar-nav navbar-right',
-						)	);
-
+						if (is_page('home')) {
+							wp_nav_menu( array(
+									'theme_location' => 'home',
+									'container' =>	'ul',
+									'container_class' => 'navbar-collapse collapse test',
+									'menu_class' => 'nav navbar-nav navbar-right',
+							)	);
+						} else {
+							wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'container' =>	'ul',
+									'container_class' => 'navbar-collapse collapse test2',
+									'menu_class' => 'nav navbar-nav navbar-right',
+							)	);
+						}
  					?>
-<!--
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#music-player">Audio</a></li>
-              <li><a href="#featurette">Video</a></li>
-              <li><a href="#shows">Shows</a></li>
-              <li><a href="#blogsection">Blog</a></li>
-              <li><a href="contact.html"> Contact</a></li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>

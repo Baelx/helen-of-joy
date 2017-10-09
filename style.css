@@ -378,6 +378,15 @@ h4 {
 	font-size: 18px;
 }
 
+#404-text {
+	color:black;
+	/*text-shadow:
+	-1px -1px 0 #fff,
+	1px -1px 0 #fff,
+	-1px 1px 0 #fff,
+	1px 1px 0 #fff;*/
+}
+
 /* Floating box container */
 
 	#bio-container, .post  {
@@ -409,6 +418,17 @@ a:hover {
 	color: black;
 }
 
+
+/* Page Background */
+.error404 {
+	background: url('assets/img/404-background.png');
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+}
 
 /* HERO */
 
@@ -679,6 +699,10 @@ background-color:#303030;
 
 .post-excerpt {
 	font-size:1.1em;
+}
+
+.post-excerpt p {
+	display: inline;
 }
 
 .entry-title {

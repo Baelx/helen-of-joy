@@ -42,9 +42,10 @@ function helen_of_joy_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'helen-of-joy' ),
+		'primary' => esc_html__( 'Primary', 'helen-of-joy' ),
+		'home' => esc_html__( 'Home', 'helen-of-joy' ),
+		'404' => esc_html__( '404', 'helen-of-joy' )
 	) );
 
 	/*
@@ -176,18 +177,15 @@ function change_post_object_label() {
 /**
  * To remove the "home" links from wp_nav_menu
  */
-function my_page_menu_args( $args ) {
-    $args['show_home'] = false;
-    return $args;
-}
+// function my_page_menu_args( $args ) {
+//     $args['show_home'] = false;
+//     return $args;
+// }
 
 /**
- * Something excerpt
+ * Change the excerpt ellipsis with brackets into just ellipsis
  */
-add_filter( 'wp_page_menu_args', 'my_page_menu_args' );
-
 function new_excerpt_more($more) {
-	global $post;
-	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading $raquo;</a>';
-	add_filter('excerpt_more', 'new_excerpt_more');
+    return '...';
 }
+add_filter('excerpt_more', 'new_excerpt_more');

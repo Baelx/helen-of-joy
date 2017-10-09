@@ -26,30 +26,39 @@ $recent_posts = new WP_Query( $args ); ?>
 
 
       <main id="content" class="col-sm-6" role="main">
-        <article class="post">
-          <header>
-            <h3>
-              <a href="<?php get_permalink(); ?>"><?php the_title(); ?></a>
-            </h3>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php
+						if ( is_single() ) :
+							the_title( '<h3 class="entry-title">', '</h3>' );
+						else :
+							the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+						endif;
+
+						if ( 'post' === get_post_type() ) : ?>
+
 						<?php if ( has_post_thumbnail() ) { ?>
 						<div class="post-image">
 							<?php the_post_thumbnail(); ?>
 						</div><!-- post-image -->
 						<?php } ?>
-            <div class="post-details">
-              <i class="fa fa-user">Jess</i>
-              <i class="fa fa-clock-o">Jan 1, 2017</i>
-              <i class="fa fa-folder"></i>
-              <a href="">Tutorials</a>
-              <a href="">Coding</a>
-              <i class="fa fa-tags"></i>
-              <p><?php the_tags( 'Tags: ', ', ', '<br />' ); ?></a>
-            </div>
-          </header>
-          <div class="post-excerpt">
-            <?php the_excerpt(); ?><a href="<?php get_permalink(); ?>">continue reading &raquo;</a>
-          </div>
-        </article>
+
+							<div class="post-details">
+								<i class="fa fa-user"></i><?php the_author(); ?>
+								<i class="fa fa-clock-o"></i> <time><?php the_date(); ?></time>
+								<i class="fa fa-tags"></i> <?php the_tags('',',',''); ?>
+
+								<?php edit_post_link( 'Edit this post', '<i class="fa fa-pencil"></i>', ''); ?>
+							</div><!-- post-details -->
+
+							<?php
+							endif; ?>
+						</header>
+
+							<div class="post-excerpt">
+								<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
+							</div><!-- post-excerpt -->
+				</article><!-- #post-## -->
       </main>
 
     <?php endwhile; ?>
@@ -60,6 +69,9 @@ $recent_posts = new WP_Query( $args ); ?>
     <?php else : ?>
     <p><?php _e( 'No recent posts :\'(' ); ?></p>
     <?php endif; ?>
+
+
+
 
       <a href="blog.html" class="link-to-more">Read More...</a>
     </div>
