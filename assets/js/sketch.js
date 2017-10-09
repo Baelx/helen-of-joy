@@ -144,6 +144,7 @@ function mouseMoved() {
 
 function mousePressed() {
   // Check if mouse is inside the circles
+
   incircles[0] = dist(mouseX, mouseY, sw / 3.5555, imgh / 2.4981410215926707 + drawheight);
   incircles[1] = dist(mouseX, mouseY, sw / 1.38288, imgh / 2.4705695099518676 + drawheight);
   incircles[2] = dist(mouseX, mouseY, sw / 4.73372, imgh / 1.6903885892153363 + drawheight);
@@ -152,7 +153,6 @@ function mousePressed() {
 
 
   if (incircles[0] < circleDraw() / 2) {
-    // window.location.href = "audio.html";
     smoothScroll('music-player');
   }
   if (incircles[1] < circleDraw() / 2) {
