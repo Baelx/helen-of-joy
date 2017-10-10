@@ -594,14 +594,6 @@ color:black;
 font-size:1.25em;
 }
 
-#signup {
-	text-align: center;
-	background: url('/wp-content/themes/helen-of-joy/assets/img/banner_grass.jpg') center center repeat fixed;
-	background-size: cover;
-	color: white;
-	padding: 200px 0;
-}
-
 footer {
 	background: #3e4249;
 	color: white;
@@ -658,6 +650,8 @@ background-color:#303030;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center;
 }
 
 #blogsection {

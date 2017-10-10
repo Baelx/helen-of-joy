@@ -169,6 +169,7 @@ if (sw > 772){
   }
 
 } else {
+//Make clickable area larger for mobile devices
   if (incircles[0] < circleDraw()+10) {
     smoothScroll('music-player');
   }

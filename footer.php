@@ -21,10 +21,13 @@
 	<div class="container">
 		<nav>
 			<ul class="list-unstyled list-inline footer-text">
-				<li><a href="blog.html">Blog Archive</a></li>
-				<li><a href="audio.html">Audio Archive</a></li>
-				<li><a href="video.html">Video Archive</a></li>
-				<li><a href="#topofpage">Once more from the top</a></li>
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'footer',
+						'container' =>	'nav',
+						'menu_class' => 'list-unstyled list-inline',
+				)	);
+				?>
 			</ul>
 		</nav>
 	</div>
