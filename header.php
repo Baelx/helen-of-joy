@@ -64,15 +64,15 @@
 						if (is_page('home')) {
 							wp_nav_menu( array(
 									'theme_location' => 'home',
-									'container' =>	'ul',
-									'container_class' => 'navbar-collapse collapse test',
+									'container' =>	'nav',
+									'container_class' => 'navbar-collapse collapse',
 									'menu_class' => 'nav navbar-nav navbar-right',
 							)	);
 						} else {
 							wp_nav_menu( array(
 									'theme_location' => 'primary',
-									'container' =>	'ul',
-									'container_class' => 'navbar-collapse collapse test2',
+									'container' =>	'nav',
+									'container_class' => 'navbar-collapse collapse',
 									'menu_class' => 'nav navbar-nav navbar-right',
 							)	);
 						}

@@ -9,12 +9,12 @@
 
 get_header(); ?>
 
-<header class="page-header">
+<section class="page-header" style="border-bottom:0px;">
 	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'helen-of-joy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-</header><!-- .page-header -->
+</section><!-- .page-header -->
 
 	<div class="container">
-		<div id="primary" class="row">
+		<div class="row">
 			<main id="content" class="col-sm-8">
 		<?php
 		if ( have_posts() ) : ?>

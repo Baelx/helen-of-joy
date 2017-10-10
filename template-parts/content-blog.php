@@ -72,8 +72,8 @@ $recent_posts = new WP_Query( $args ); ?>
 
 
 
-
-      <a href="blog.html" class="link-to-more">Read More...</a>
+		<div class="col-sm-12">
+      <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="link-to-more">Read More...</a>
     </div>
   </div>
 </section>

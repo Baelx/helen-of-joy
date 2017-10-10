@@ -29,7 +29,6 @@
 			<div class="post-details">
 				<i class="fa fa-user"></i><?php the_author(); ?>
 				<i class="fa fa-clock-o"></i> <time><?php the_date(); ?></time>
-				<i class="fa fa-folder"></i> <?php the_category(', '); ?>
 				<i class="fa fa-tags"></i> <?php the_tags('',',',''); ?>
 
 				<?php edit_post_link( 'Edit this post', '<i class="fa fa-pencil"></i>', ''); ?>

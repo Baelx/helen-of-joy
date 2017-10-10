@@ -15,7 +15,7 @@ $link_to_video_page_text = get_field('link_to_video_page_text');
       <div class="col-sm-8 col-sm-offset-2">
         <h2><?php echo $featured_video_section_title; ?></h2>
         <?php echo $video_html_embed_code; ?><br>
-        <a href="video.html" class="link-to-more"><?php echo $link_to_video_page_text; ?></a>
+        <a href="<?php echo get_page_link(76); ?>" class="link-to-more"><?php echo $link_to_video_page_text; ?></a>
       </div>
     </div>
   </div>
