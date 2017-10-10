@@ -56,7 +56,7 @@ $recent_posts = new WP_Query( $args ); ?>
 						</header>
 
 							<div class="post-excerpt">
-								<?php the_excerpt(); ?><a href="post.html">continue reading &raquo;</a>
+								<?php the_excerpt(); ?><a href="<?php echo get_permalink($post->ID); ?>">continue reading &raquo;</a>
 							</div><!-- post-excerpt -->
 				</article><!-- #post-## -->
       </main>

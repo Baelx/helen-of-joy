@@ -151,7 +151,7 @@ function mousePressed() {
   incircles[3] = dist(mouseX, mouseY, sw / 2.24403, imgh / 1.7655350352677948 + drawheight);
   incircles[4] = dist(mouseX, mouseY, sw / 1.434977, imgh / 1.666365438789363 + drawheight);
 
-
+if (sw > 772){
   if (incircles[0] < circleDraw() / 2) {
     smoothScroll('music-player');
   }
@@ -165,6 +165,24 @@ function mousePressed() {
     smoothScroll('blogsection');
   }
   if (incircles[4] < circleDraw() / 2) {
-    window.location.href = "contact.html";
+    window.location.href = window.location.origin + "/contact";
   }
+
+} else {
+  if (incircles[0] < circleDraw()+10) {
+    smoothScroll('music-player');
+  }
+  if (incircles[1] < circleDraw()+10) {
+    smoothScroll('featurette');
+  }
+  if (incircles[2] < circleDraw()+10) {
+    smoothScroll('shows');
+  }
+  if (incircles[3] < circleDraw()+10) {
+    smoothScroll('blogsection');
+  }
+  if (incircles[4] < circleDraw()+10) {
+    window.location.href = window.location.origin + "/contact";
+  }
+}
 }
