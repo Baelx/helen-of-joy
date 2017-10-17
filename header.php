@@ -9,6 +9,8 @@
  * @package helen-joy
  */
 
+$hello = "hello";
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -48,7 +50,7 @@
 
     <!--NAVBAR-->
     <div id="navbar" class="navbar-wrapper">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-fixed-top <?php if (is_404() == 0 ) {echo "navbar-inverse";} ?>" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
