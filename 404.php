@@ -19,25 +19,40 @@ get_header(); ?>
 
 <style>
 a, li.current_page_parent a, h2 {
-	color:black !important;
+	color:black!important;
+	text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;!important;
 }
+
 ul {
 	float:right;
 }
-.navbar-nav > li > a {
-	background-color:white;
-}
-@media screen and (max-width:430px) {
-ul {
-	border: 1px solid black;
-        border-top-width: 1px;
-        border-top-style: solid;
-        border-top-color: black;
-    margin-top: 0;
-    border-top: none;
 
+.icon-bar {
+	background-color:black;
 }
-}
+
+@media screen and (max-width:430px) {
+	#menu-primary-menu {
+		border: 1px solid black;
+	        border-top-width: 1px;
+	        border-top-style: solid;
+	        border-top-color: black;
+	  margin-top: -1px;
+	  border-top: none;
+	}
+	nav {
+		margin-top:-1px;
+	}
+	.navbar-header {
+		border:1px solid black;
+	}
+	.navbar-nav > li > a {
+		background-color:white;
+	}
 }
 
 </style>
