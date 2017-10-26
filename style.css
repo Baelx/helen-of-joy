@@ -598,7 +598,6 @@ footer {
 	background: #3e4249;
 	color: white;
 	padding 20px 0 10px;
-	font-size: 12px;
 	-moz-box-shadow: 0 0 5px 5px #111;
 	-webkit-box-shadow: 0 0 5px 5px #111;
 	box-shadow: 0 0 5px 5px #111;
@@ -784,12 +783,18 @@ iframe {
 	font-size: 2em;
 }
 
-.footer-text li {
-	margin-top: 3px;
-	font-size: 2em;
-	padding-left: 1.5em;
+
+
+
+#menu-footer-menu {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 }
 
+#menu-footer-menu > li {
+	padding-right:1em!important;
+}
 
 /* FORMS */
 
