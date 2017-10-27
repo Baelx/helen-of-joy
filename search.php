@@ -9,13 +9,14 @@
 
 get_header(); ?>
 
-<section class="page-header" style="border-bottom:0px;">
-	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'helen-of-joy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-</section><!-- .page-header -->
+
 
 	<div class="container">
 		<div class="row">
-			<main id="content" class="col-sm-8">
+			<section class="page-header" style="border-bottom:0px;">
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'helen-of-joy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</section><!-- .page-header -->
+			<main id="content" class="col-sm-9">
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -42,7 +43,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 
-		<aside class="col-sm-4">
+		<aside class="col-sm-3">
 			<?php get_sidebar(); ?>
 		</aside>
 
@@ -50,4 +51,5 @@ get_header(); ?>
 <div>
 
 <?php
+
 get_footer();

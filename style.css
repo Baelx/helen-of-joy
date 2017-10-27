@@ -648,10 +648,12 @@ background-color:#303030;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position:center;
 }
+
 
 #blogsection {
 	padding-bottom: 0px;
