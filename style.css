@@ -381,7 +381,7 @@ h4 {
 
 /* Floating box container */
 
-	#bio-container, .post  {
+	#bio-container, .post, .widget  {
 		background-color: #3e4249;
 		opacity: 0.8;
 		border: solid 1px #ddd;
@@ -462,6 +462,7 @@ section {
 	background-size: cover;
 }
 
+/*include a better default image */
 .feature-image-default-alt {
 	background: url('.../img/hipster-stuff.jpg') no-repeat;
 	background-size: cover;
