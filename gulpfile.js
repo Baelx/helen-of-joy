@@ -5,7 +5,8 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssvars = require("postcss-simple-vars"),
     cssnano = require("gulp-cssnano"),
-    uglify = require("gulp-uglify");
+    uglify = require("gulp-uglify"),
+    imagemin = require("gulp-imagemin");
 
 gulp.task("styles", function() {
 	var plugins = [
@@ -28,6 +29,15 @@ gulp.task("compress", function(cb) {
 	);
 });
 
+gulp.task("img", function() {
+	gulp.src("assets/img/src/*.{png,jpeg,jpg}")
+		.pipe(imagemin({
+			optimizationLevel: 7,
+			progressive: true,
+		}))
+		.pipe(gulp.dest("assets/img"))
+});
+
 gulp.task("watch", function() {
 
 	watch("./assets/css/style.css", function() {
@@ -35,5 +45,8 @@ gulp.task("watch", function() {
 	});
 	watch("./assets/js/homepage/*.js", function() {
 		gulp.start("compress");
+	});
+	watch("assets/img/src/*{png,jpeg,jpg}", function() {
+		gulpe.start("img");
 	});
 });
