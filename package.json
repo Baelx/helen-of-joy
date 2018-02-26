@@ -25,7 +25,8 @@
     "gulp-postcss": "^7.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "postcss-simple-vars": "^4.1.0"
+    "postcss-simple-vars": "^4.1.0",
+    "pump": "^3.0.0"
   },
   "dependencies": {}
 }

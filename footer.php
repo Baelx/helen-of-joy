@@ -46,5 +46,11 @@
 	<script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
 <?php endif; ?>
 
+<?php if( is_page('home') ) : ?>
+	<!--p5.js links for image map -->
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/p5.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/sketch.js"></script>
+	<style> #navbar { display:none;} </style>
+<?php endif; ?>
 </body>
 </html>
