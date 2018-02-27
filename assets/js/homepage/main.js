@@ -5,6 +5,11 @@ function createSpace() {
 }
 createSpace();
 
+//make navbar auto-close when you click on one of the buttons
+$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});
+
 //jquery smooth scrolling for anchor tags
 var wh = $(window).height();
 

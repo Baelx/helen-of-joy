@@ -9,12 +9,12 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="search-none-section no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'helen-of-joy' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="search-page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -24,13 +24,12 @@
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'helen-of-joy' ); ?></p>
 			<?php
-				get_search_form();
+
 
 		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'helen-of-joy' ); ?></p>
 			<?php
-				get_search_form();
 
 		endif; ?>
 	</div><!-- .page-content -->

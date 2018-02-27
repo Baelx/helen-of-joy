@@ -13,8 +13,8 @@ get_header(); ?>
 
 	<div class="container">
 		<div class="row">
-			<section class="page-header" style="border-bottom:0px;">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'helen-of-joy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<section class="search-page-header" style="border-bottom:0px;">
+				<h1 class="search-page-title"><?php printf( esc_html__( 'Search Results for: %s', 'helen-of-joy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</section><!-- .page-header -->
 			<main id="content" class="col-sm-9">
 		<?php

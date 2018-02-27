@@ -696,14 +696,32 @@ background-color:#303030;
 }
 
 .entry-title {
+	margin: 0.5em 0;
 	font-size:1.5em;
+}
+
+.search-page-header {
+padding: 80px 0 0 0;
+text-shadow: 2px 2px #000;
+}
+
+.search-page-title {
+font-size: 2em;
+}
+
+.search-page-content {
+color: white;
+}
+
+.search-none-section {
+padding: 0;
 }
 
 .post-body {
 	padding-top: 17px;
 }
 
-.post header h1, .post header h3 {
+ header h1, .post header h3 {
 	margin:0;
 	padding:0.5em 0;
 }
