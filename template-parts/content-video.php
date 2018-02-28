@@ -9,7 +9,7 @@ $link_to_video_page_text = get_field('link_to_video_page_text');
 
 
 <!--VIDEO FEATURETTE-->
-<section id="featurette" style="background:<?php echo $featured_image; ?>">
+<section id="featurette" class="section-block" style="background-image:url(<?php echo $featured_image['url'] ?>);">
   <div class="container">
     <div class="row section-header">
       <div class="col-sm-8 col-sm-offset-2">

@@ -8,7 +8,7 @@ $bio_background_image = get_field('bio_background_image');
 ?>
 
 <!--BIO SECTION-->
-<section id="bio-section" style="background-image: url(<?php echo $bio_background_image['url'] ?>);"
+<section id="bio-section" class="section-block" style="background-image: url(<?php echo $bio_background_image['url'] ?>);"
   title="<?php echo $bio_background_image['alt'] ?>">
   <div class="container" id="bio-container">
     <div class="section-header">

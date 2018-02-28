@@ -476,17 +476,18 @@ section {
 	color: white;
 }
 
-#bio-section {
+.section-block {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: black;
+	text-align: center;
+	color: white;
 }
 
 #bio-container {
 	padding-top: 20px;
-	color: black;
 	margin-top: 100px;
 	margin-bottom: 100px;
 	width: 50%;
@@ -530,11 +531,6 @@ section {
 }
 
 #featurette {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: black;
 	text-align: center;
 	color: white;
 }
