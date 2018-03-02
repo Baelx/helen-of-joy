@@ -588,8 +588,10 @@ section {
 }
 
 #show-date-time {
-color:black;
-font-size:1.25em;
+	color: #868686;
+	font-size: 1.25em;
+	text-shadow: 1px 1px 1px #626262;
+	font-size: 1.6em;
 }
 
 footer {

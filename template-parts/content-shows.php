@@ -1,3 +1,8 @@
+<?php
+// Show Variables
+
+?>
+
 <!--SHOWS-->
 <section id="shows">
   <div class="container">
@@ -6,7 +11,7 @@
         <h2>Shows</h2>
 
         <?php $loop = new WP_Query(array('post_type' => 'show',
-          'orderby' => 'post_date' , 'order' => 'ASC')); ?>
+          'orderby' => 'post_date' , 'order' => 'DESC')); ?>
 
 
         <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -23,9 +28,9 @@
               <p><?php the_content(); ?></p>
               <span id="show-date-time"><?php  $date = DateTime::createFromFormat('dmY', get_field('show_date')); echo $date->format('D jS F Y'); ?>, <?php the_field('show_time'); ?></br></span>
               <span>
-              <a href="<?php the_field('show_location'); ?>">Location</a>
+              <a href="<?php esc_url(the_field('get_directions')); ?>">Get Directions</a>
               -
-              <a href="<?php the_field('venue_site'); ?>">Venue's Site</a>
+              <a href="<?php esc_url(the_field('event_page')); ?>">Event Page</a>
               </span>
             </div>
           </div>
