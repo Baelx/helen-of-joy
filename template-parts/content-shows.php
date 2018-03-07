@@ -42,15 +42,8 @@ $show = "example";
               <p><?php the_content(); ?></p>
               <span id="show-date-time"><?php  $date = DateTime::createFromFormat('dmY', get_field('show_date')); echo $date->format('D jS F Y'); ?>, <?php the_field('show_time'); ?></br></span>
               <span class="show-links">
-
-                
-                	<a href="<?php the_field('get_directions'); ?>">Get Directions</a>
-
-
-
-                	<a href="<?php the_field('event_page'); ?>">Event Page</a>
-
-
+                <a href="<?php the_field('get_directions'); ?>">Get Directions</a>
+                <a href="<?php the_field('event_page'); ?>">Event Page</a>
               </span>
             </div>
           </div>

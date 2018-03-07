@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+		<section>
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -32,7 +32,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+		</section>
 <?php
 get_sidebar();
 get_footer();
