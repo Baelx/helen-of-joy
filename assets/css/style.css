@@ -594,6 +594,10 @@ section {
 	font-size: 1.6em;
 }
 
+.show-links a {
+	margin:0.3em;
+}
+
 footer {
 	background: #3e4249;
 	color: white;
@@ -868,6 +872,10 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 }
 
 /* Contact Page */
+
+.page-id-97 {
+	color: white;
+}
 
 body.page-id-97 div#page.site div.container div#primary.row {
   padding-top:10px;
