@@ -11,7 +11,7 @@
         // get posts
         $posts = get_posts(array(
           'post_type'			=> 'show',
-          'posts_per_page'	=> 4,
+          'posts_per_page'	=> -1,
           'meta_key'			=> 'show_date',
           'order'				=> 'ASC'
         ));
