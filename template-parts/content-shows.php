@@ -1,9 +1,3 @@
-<?php
-// Show Variables
-$show = "example";
-
-?>
-
 <!--SHOWS-->
 <section id="shows">
   <div class="container">
@@ -19,9 +13,12 @@ $show = "example";
           'post_type'			=> 'show',
           'posts_per_page'	=> 4,
           'meta_key'			=> 'show_date',
-          'order'				=> 'DESC'
+          'order'				=> 'ASC'
         ));
 
+        $tomorrow = new DateTime("tomorrow");
+        $showdate = get_field("show_date", false, false);
+        $showdate = new DateTime($showdate);
         if( $posts ): ?>
 
         <?php foreach( $posts as $post ):
@@ -29,6 +26,7 @@ $show = "example";
           setup_postdata( $post )
 
           ?>
+
 
           <div class="row show">
             <div class="col-sm-6">
@@ -40,13 +38,19 @@ $show = "example";
             <div class="col-sm-4">
               <h3><?php the_title(); ?></h3>
               <p><?php the_content(); ?></p>
-              <span id="show-date-time"><?php  $date = DateTime::createFromFormat('dmY', get_field('show_date')); echo $date->format('D jS F Y'); ?>, <?php the_field('show_time'); ?></br></span>
+              <span id="show-date-time"><?php $date = DateTime::createFromFormat('dmY', get_field('show_date'));
+echo $date->format('jS F Y'); ?>, <?php if (get_field("show_time")): the_field('show_time'); endif; ?></br></span>
               <span class="show-links">
-                <a href="<?php the_field('get_directions'); ?>">Get Directions</a>
-                <a href="<?php the_field('event_page'); ?>">Event Page</a>
+                <?php if (get_field("get_directions")): ?>
+                  <a href="<?php the_field('get_directions'); ?>">Get Directions</a>
+                <?php endif; ?>
+                <?php if (get_field("event_page")): ?>
+                  <a href="<?php the_field('event_page'); ?>">Event Page</a>
+                <?php endif; ?>
               </span>
             </div>
           </div>
+
 
         <?php endforeach; ?>
 
