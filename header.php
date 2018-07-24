@@ -9,8 +9,6 @@
  * @package helen-joy
  */
 
-$hello = "hello";
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
