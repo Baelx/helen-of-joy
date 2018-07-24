@@ -38,6 +38,7 @@ body.page-id-76 {
   endif; ?>");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height:100%;
   margin:0;
 }
