@@ -1,4 +1,9 @@
 <?php
+
+$blog_preview_background_image = get_field('blog_preview_background_image');
+$mobile_blog_preview_background_image = get_field('mobile_blog_preview_background_image');
+
+
 $args = array(
 	'posts_per_page' => 2,
 	'orderby' => 'post_date',
@@ -9,8 +14,9 @@ $args = array(
 
 <?php
 // the query
-$recent_posts = new WP_Query( $args ); ?>
+$recent_posts = new WP_Query( $args );
 
+?>
 
 <!--BLOG-->
 <section class="blog" id="blogsection">
@@ -67,13 +73,26 @@ $recent_posts = new WP_Query( $args ); ?>
     <?php wp_reset_postdata(); ?>
 
     <?php else : ?>
-    <p><?php _e( 'No recent posts :\'(' ); ?></p>
+    <p class="no-recent-posts"><?php _e( 'No recent posts :\'(' ); ?></p>
     <?php endif; ?>
-
 
 
 		<div class="col-sm-12">
       <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="link-to-more">Read More...</a>
     </div>
   </div>
+	<style>
+	#blogsection {
+	background-image:url(<?php echo $mobile_blog_preview_background_image; ?>);
+	background-position: center;
+  background-attachment: fixed;
+	background-size: cover;
+	}
+
+	@media screen and (min-width:772px){
+		#blogsection {
+		 background-image:url(<?php echo $blog_preview_background_image; ?>);
+		}
+	}
+	</style>
 </section>

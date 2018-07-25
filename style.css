@@ -571,8 +571,12 @@ footer li.signup-link a:hover {
 #blogsection {
 	padding-bottom: 0;
 	padding-top: 0;
-	background: url(/wp-content/themes/helen-of-joy/assets/img/light-blur.jpeg) 50% repeat fixed;
-	background-size: cover
+}
+
+.no-recent-posts {
+color: white;
+font-size: 1.5em;
+margin-bottom: 2em;
 }
 
 #primary {
